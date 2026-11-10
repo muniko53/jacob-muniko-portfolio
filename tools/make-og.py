@@ -155,14 +155,14 @@ project_og(
     "Case file / marketplace platform",
     "Linklet",
     "A campus marketplace built from zero, with verified accounts, real-time messaging, offers, and admin tools.",
-    IMG / "linklet-listings.webp",
+    IMG / "linklet-home.webp",
 )
 project_og(
     "mica",
     "Case file / local AI assistant",
     "MICA",
     "A Windows assistant that can act, built around an approval gate, a local server, and optional providers.",
-    extra=True,
+    IMG / "mica-chat.webp",
 )
 project_og(
     "filepilot",

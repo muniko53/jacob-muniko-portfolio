@@ -20,7 +20,12 @@
 <meta name="twitter:description" content="How Linklet, a campus marketplace for Kenyan university students, was built with React, Express, PostgreSQL, Socket.IO, Cloud Run, and Vercel.">
 <meta name="twitter:image" content="https://muniko53.github.io/jacob-muniko-portfolio/assets/img/og-linklet.png">
 <meta name="theme-color" content="#0C0F0E" id="theme-color-meta">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230E1714'/%3E%3Cpath d='M14 46V20h5.5v21H30v5H14Z' fill='%23EFEDE4'/%3E%3Cpath d='M34 20h6l5 14 5-14h6l-8 26h-6l-8-26Z' fill='%234FC3AE'/%3E%3C/svg%3E">
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../../assets/img/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
 <link rel="preload" href="../../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>
@@ -54,7 +59,7 @@
 <header class="site-head">
   <div class="head-inner">
     <a class="brand" href="../../" aria-label="Jacob Muniko — home">
-      <span class="brand-mark" aria-hidden="true">JM</span>
+      <span class="brand-mark" aria-hidden="true"><img src="../../assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
       <span class="brand-name">Jacob Muniko</span>
     </a>
 
@@ -126,8 +131,8 @@
       </div>
 
       <figure class="case-hero-figure ">
-        <img src="../../assets/img/linklet-listings.webp" alt="Linklet browse listings page with category filters and listings for a fridge, toiletries, a fan, sneakers, and textbooks" width="1600" height="900" fetchpriority="high" decoding="async">
-        <figcaption>The public listing feed, captured 10 November 2026.</figcaption>
+        <img src="../../assets/img/linklet-home.webp" alt="Linklet home page showing &quot;Link it. Trade it. Own it.&quot; tagline with stats for active listings, students, and universities" width="1919" height="911" fetchpriority="high" decoding="async">
+        <figcaption>The live home page, captured 10 November 2026. Shows 7+ active listings, 5+ students, 1+ universities.</figcaption>
         
       </figure>
     </div>
@@ -157,11 +162,6 @@
 </section>
 
 <figure class="case-figure">
-  <img src="../../assets/img/linklet-home.webp" alt="Linklet home page with the headline Buy and sell within your campus, category links, and a featured listing" width="1600" height="900" loading="lazy" decoding="async">
-  <figcaption>The public entry point. The marketplace is organised around a campus, a category, and a listing, not around a generic social feed.</figcaption>
-</figure>
-
-<figure class="case-figure">
   <img src="../../assets/img/linklet-architecture.svg" alt="Linklet architecture: React on Vercel, Express and Socket.IO on Google Cloud Run, Supabase PostgreSQL, and integrations for Cloudinary, Resend, Africa's Talking, M-Pesa Daraja, Google OAuth and Web Push" width="1200" height="700" loading="lazy" decoding="async">
   <figcaption>The production topology. The browser calls Cloud Run directly, so auth cookies, CSRF checks, and CORS are part of the system, not an afterthought. <a href="../../assets/img/linklet-architecture.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
 </figure>
@@ -185,6 +185,26 @@
     </ul>
   </div>
 </section>
+
+<figure class="case-figure">
+  <img src="../../assets/img/linklet-home.webp" alt="Linklet home page showing the headline Link it. Trade it. Own it. with stats for active listings, students, and universities" width="1919" height="911" loading="lazy" decoding="async">
+  <figcaption>The live home page, captured 10 November 2026. Shows 7+ active listings, 5+ students, 1+ universities.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="../../assets/img/linklet-sell.webp" alt="Linklet create listing flow step 1: selecting what type of item to sell with category options" width="1919" height="915" loading="lazy" decoding="async">
+  <figcaption>Step one of the sell flow. The category taxonomy maps to search filters so discovery works without free text.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="../../assets/img/linklet-listings-auth.webp" alt="Linklet authenticated listing detail page showing product images, description, price, location, and seller information with masked contact details" width="1906" height="914" loading="lazy" decoding="async">
+  <figcaption>Authenticated listing detail. Seller contact information is visible to interested buyers; personal details are masked in this screenshot.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="../../assets/img/linklet-chat.webp" alt="Linklet in-app chat window showing a conversation about a standing fan listing with product image and masked message content" width="1919" height="909" loading="lazy" decoding="async">
+  <figcaption>In-app messaging tied to a listing. The conversation stays inside the product so the handoff is traceable and safe. Message content is masked.</figcaption>
+</figure>
 
 <section class="case-section">
   <div class="case-section-head">
@@ -230,20 +250,6 @@
 
 <section class="case-section">
   <div class="case-section-head">
-    <p class="case-label">Evidence</p>
-    <h2>The public marketplace</h2>
-  </div>
-  <div class="case-section-body">
-    <figure class="case-figure">
-      <img src="../../assets/img/linklet-listings.webp" alt="Linklet browse listings page showing category filters and listings for a fridge, toiletries, a fan, sneakers, and textbooks" width="1600" height="900" loading="lazy" decoding="async">
-      <figcaption>The public listing feed, captured on 10 November 2026. The site is live at <a href="https://www.linklet.co.ke" rel="noopener">linklet.co.ke</a>. The listing count changes with the marketplace.</figcaption>
-    </figure>
-    <p class="figure-note">Authenticated screenshots of chat and admin flows are being prepared. They are not shown until the data in them has been checked and blurred.</p>
-  </div>
-</section>
-
-<section class="case-section">
-  <div class="case-section-head">
     <p class="case-label">Status</p>
     <h2>Live, and still being hardened</h2>
   </div>
@@ -265,7 +271,6 @@
     <p>The next product work is broader listing categories and business advertising. Those are future plans, not shipped features. The engineering work continues on the less visible parts: keeping the realtime path reliable, tightening moderation and admin flows, and making the mobile experience hold up on the connections students actually have.</p>
   </div>
 </section>
-
   </div>
 
   <footer class="case-end">
@@ -288,7 +293,7 @@
   <div class="foot-inner">
     <div class="foot-brand">
       <a class="brand" href="../../" aria-label="Jacob Muniko — home">
-        <span class="brand-mark" aria-hidden="true">JM</span>
+        <span class="brand-mark" aria-hidden="true"><img src="../../assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
         <span class="brand-name">Jacob Muniko</span>
       </a>
       <p class="foot-line">Technology builder. Karatina, Kenya. EAT (UTC+3).</p>

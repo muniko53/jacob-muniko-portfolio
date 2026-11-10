@@ -411,10 +411,13 @@ code {
   height: 1.95rem;
   border: 1px solid var(--rule-strong);
   border-radius: 1px;
-  font-family: var(--font-serif);
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  color: var(--warm);
+  background: var(--surface);
+}
+
+.brand-mark img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
 
 .brand-name {

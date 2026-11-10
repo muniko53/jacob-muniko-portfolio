@@ -28,11 +28,11 @@
     }
   ],
   "heroFit": "contain",
-  "hero": "mica-architecture.svg",
-  "heroAlt": "MICA architecture: a browser console and native companion communicate with a local server on 127.0.0.1, which contains a tool runner, approval gate, SQLite state, companion bridge, and provider boundary",
-  "heroWidth": 1200,
-  "heroHeight": 700,
-  "heroCaption": "MICA's current architecture. The local boundary and approval gate are the product, not add-ons.",
+  "hero": "mica-chat.webp",
+  "heroAlt": "MICA chat console showing the local API boundary notice and a research query with masked user identity",
+  "heroWidth": 1905,
+  "heroHeight": 919,
+  "heroCaption": "The browser console. The yellow banner is the local API boundary: the page cannot reach the server without a launcher token. This is the safety model made visible.",
   "seoTitle": "MICA case file — Jacob Muniko",
   "seoDescription": "How MICA, a local-first Windows AI assistant, handles files, apps, browser actions, memory and automation behind an approval gate. Architecture and current status.",
   "ogImage": "og-mica.png"

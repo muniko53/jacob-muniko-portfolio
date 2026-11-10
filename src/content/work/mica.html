@@ -20,6 +20,26 @@
   </div>
 </section>
 
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/mica-architecture.svg" alt="MICA architecture: a browser console and native companion communicate with a local server on 127.0.0.1, which contains a tool runner, approval gate, SQLite state, companion bridge, and provider boundary" width="1200" height="700" loading="lazy" decoding="async">
+  <figcaption>MICA's current architecture. The local boundary and approval gate are the product, not add-ons. <a href="{{ROOT}}assets/img/mica-architecture.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/mica-chat.webp" alt="MICA chat console showing the local API boundary notice and a research query with masked user identity" width="1905" height="919" loading="lazy" decoding="async">
+  <figcaption>The browser console. The yellow banner is the local API boundary: the page cannot reach the server without a launcher token. This is the safety model made visible.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/mica-models.webp" alt="MICA AI Models page showing provider cards for FreeLLMAPI, Google Gemini, OpenAI, and Groq with key status and test connection buttons" width="1919" height="915" loading="lazy" decoding="async">
+  <figcaption>Provider configuration. Keys are entered locally; status is checked against each provider. No keys are shown in this screenshot.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/mica-projects.webp" alt="MICA Projects & Tasks page showing a project form with name, status, and placeholder fields" width="1906" height="925" loading="lazy" decoding="async">
+  <figcaption>Projects and tasks. The local SQLite store holds projects, memories, and scheduled routines behind the same approval boundary.</figcaption>
+</figure>
+
 <section class="case-section">
   <div class="case-section-head">
     <p class="case-label">What works</p>

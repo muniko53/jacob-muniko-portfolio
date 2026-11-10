@@ -21,11 +21,6 @@
 </section>
 
 <figure class="case-figure">
-  <img src="{{ROOT}}assets/img/linklet-home.webp" alt="Linklet home page with the headline Buy and sell within your campus, category links, and a featured listing" width="1600" height="900" loading="lazy" decoding="async">
-  <figcaption>The public entry point. The marketplace is organised around a campus, a category, and a listing, not around a generic social feed.</figcaption>
-</figure>
-
-<figure class="case-figure">
   <img src="{{ROOT}}assets/img/linklet-architecture.svg" alt="Linklet architecture: React on Vercel, Express and Socket.IO on Google Cloud Run, Supabase PostgreSQL, and integrations for Cloudinary, Resend, Africa's Talking, M-Pesa Daraja, Google OAuth and Web Push" width="1200" height="700" loading="lazy" decoding="async">
   <figcaption>The production topology. The browser calls Cloud Run directly, so auth cookies, CSRF checks, and CORS are part of the system, not an afterthought. <a href="{{ROOT}}assets/img/linklet-architecture.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
 </figure>
@@ -49,6 +44,26 @@
     </ul>
   </div>
 </section>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-home.webp" alt="Linklet home page showing the headline Link it. Trade it. Own it. with stats for active listings, students, and universities" width="1919" height="911" loading="lazy" decoding="async">
+  <figcaption>The live home page, captured 10 November 2026. Shows 7+ active listings, 5+ students, 1+ universities.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-sell.webp" alt="Linklet create listing flow step 1: selecting what type of item to sell with category options" width="1919" height="915" loading="lazy" decoding="async">
+  <figcaption>Step one of the sell flow. The category taxonomy maps to search filters so discovery works without free text.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-listings-auth.webp" alt="Linklet authenticated listing detail page showing product images, description, price, location, and seller information with masked contact details" width="1906" height="914" loading="lazy" decoding="async">
+  <figcaption>Authenticated listing detail. Seller contact information is visible to interested buyers; personal details are masked in this screenshot.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-chat.webp" alt="Linklet in-app chat window showing a conversation about a standing fan listing with product image and masked message content" width="1919" height="909" loading="lazy" decoding="async">
+  <figcaption>In-app messaging tied to a listing. The conversation stays inside the product so the handoff is traceable and safe. Message content is masked.</figcaption>
+</figure>
 
 <section class="case-section">
   <div class="case-section-head">
@@ -89,20 +104,6 @@
   <div class="case-section-body prose">
     <p>I founded Linklet and built the product across the frontend, API, database, and deployment. That included the data model, the listing and messaging flows, the admin surface, the integrations, and the production configuration. I also handled the domain and the operating details that make a deployed product feel real.</p>
     <p>The engineering work was not only feature delivery. It was learning where the system was fragile: a socket that dropped, a migration that had to be safe to rerun, an admin route that depended on the order in which auth loaded. Those are the parts that turn a codebase into a product.</p>
-  </div>
-</section>
-
-<section class="case-section">
-  <div class="case-section-head">
-    <p class="case-label">Evidence</p>
-    <h2>The public marketplace</h2>
-  </div>
-  <div class="case-section-body">
-    <figure class="case-figure">
-      <img src="{{ROOT}}assets/img/linklet-listings.webp" alt="Linklet browse listings page showing category filters and listings for a fridge, toiletries, a fan, sneakers, and textbooks" width="1600" height="900" loading="lazy" decoding="async">
-      <figcaption>The public listing feed, captured on 10 November 2026. The site is live at <a href="https://www.linklet.co.ke" rel="noopener">linklet.co.ke</a>. The listing count changes with the marketplace.</figcaption>
-    </figure>
-    <p class="figure-note">Authenticated screenshots of chat and admin flows are being prepared. They are not shown until the data in them has been checked and blurred.</p>
   </div>
 </section>
 

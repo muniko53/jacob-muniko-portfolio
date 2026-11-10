@@ -142,7 +142,7 @@ function navFor(root, active) {
   return `<header class="site-head">
   <div class="head-inner">
     <a class="brand" href="${root}" aria-label="Jacob Muniko — home">
-      <span class="brand-mark" aria-hidden="true">JM</span>
+      <span class="brand-mark" aria-hidden="true"><img src="${root}assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
       <span class="brand-name">Jacob Muniko</span>
     </a>
 
@@ -182,7 +182,7 @@ function footerFor(root) {
   <div class="foot-inner">
     <div class="foot-brand">
       <a class="brand" href="${root}" aria-label="Jacob Muniko — home">
-        <span class="brand-mark" aria-hidden="true">JM</span>
+        <span class="brand-mark" aria-hidden="true"><img src="${root}assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
         <span class="brand-name">Jacob Muniko</span>
       </a>
       <p class="foot-line">Technology builder. ${esc(site.location)}. ${esc(site.timezone)}.</p>
