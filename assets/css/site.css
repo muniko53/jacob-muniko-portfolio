@@ -70,7 +70,7 @@
   --ink: #eef0e6;
   --ink-soft: #cbd4c9;
   --muted: #93a298;
-  --faint: #74857a;
+  --faint: #647067;
   --rule: #293a31;
   --rule-strong: #3d5146;
 
@@ -105,7 +105,7 @@
   --ink: #16201a;
   --ink-soft: #34443a;
   --muted: #5f7166;
-  --faint: #6d7d72;
+  --faint: #5a665d;
   --rule: #d4dacd;
   --rule-strong: #b6c1b4;
 
@@ -639,7 +639,7 @@ code {
 }
 
 .status-concept {
-  color: var(--faint);
+  color: var(--muted);
 }
 
 .dot {
@@ -1245,9 +1245,9 @@ code {
 .contact-band .btn-primary,
 .cta-band .btn-primary,
 .case-end .btn-primary {
-  background: var(--band-ink);
-  border-color: var(--band-ink);
-  color: var(--band-bg);
+  background: var(--band-bg);
+  border-color: var(--band-bg);
+  color: var(--band-ink);
 }
 
 .contact-band .btn-primary:hover,
