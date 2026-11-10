@@ -1,0 +1,28 @@
+{
+  "slug": "smart-sales-assistant",
+  "order": 2,
+  "name": "Smart Sales Assistant",
+  "category": "AI customer support",
+  "status": "In Development",
+  "summary": "A multi-business WhatsApp sales assistant with product browsing, an order state machine, human escalation, and a React dashboard for conversations and catalogues.",
+  "problem": "Small businesses answer the same WhatsApp questions all day: price, availability, delivery, and how to order. A generic chatbot makes that worse when it invents an answer or cannot hand a real customer to a person.",
+  "solution": "A Flask service receives WhatsApp Cloud API webhooks and routes each message by intent: information, order, or escalation. Information replies are grounded in the business catalogue and customer context. Orders move through an explicit state machine. Complaints and requests for a person go to a human. A React dashboard handles businesses, products, customers, conversations, and stats, with JWT authentication and per-business credentials.",
+  "stack": [
+    "Python",
+    "Flask",
+    "PostgreSQL",
+    "WhatsApp Cloud API",
+    "OpenRouter",
+    "Groq",
+    "React",
+    "Vercel"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

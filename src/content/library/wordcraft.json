@@ -1,0 +1,27 @@
+{
+  "slug": "wordcraft",
+  "order": 1,
+  "name": "WordCraft One",
+  "category": "AI writing",
+  "status": "In Development",
+  "summary": "A Microsoft Word add-in writing assistant with a platform-agnostic analysis engine, local rule checks, an AI provider layer, and a non-destructive suggestion flow.",
+  "problem": "Writing tools tend to do one of two things: flag everything with no useful replacement, or silently rewrite the document. WordCraft One was built around a stricter contract: every issue must resolve to a real, directly insertable suggestion, and the writer stays in control of every change.",
+  "solution": "A TypeScript core engine handles grammar, spelling, repetition, and readability, plus an optional AI refinement layer behind a provider abstraction. A React task pane reads the current paragraph through Office.js, shows a writing health score and categorized issues, and lets the writer accept, edit, or reject each suggestion. Accepted changes are written back atomically and remain undoable with Ctrl+Z.",
+  "stack": [
+    "TypeScript",
+    "React",
+    "Office.js",
+    "Vite",
+    "nspell",
+    "Word task pane"
+  ],
+  "notes": "<figure class=\"case-figure\"><img src=\"{{ROOT}}assets/img/wordcraft-taskpane.webp\" alt=\"WordCraft One task pane in Microsoft Word showing a writing health score, issue categories, and a suggestion card\" width=\"1440\" height=\"1000\" loading=\"lazy\" decoding=\"async\"><figcaption>The Word task pane during a review. The add-in is sideloaded for development and is not published to Microsoft AppSource.</figcaption></figure><p class=\"figure-note\">The project keeps the core engine independent of Word so the same analysis layer could serve another editor later.</p>",
+  "links": [
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

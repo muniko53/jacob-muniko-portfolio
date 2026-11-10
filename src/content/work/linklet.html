@@ -1,0 +1,131 @@
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">The constraint</p>
+    <h2>Campus commerce was scattered across group chats and noticeboards.</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>Students at Kenyan universities buy, sell, and trade constantly, but the tools they use were not built for it. Listings disappear in WhatsApp groups. There is no reliable way to know whether the person on the other side is a student. Search is whatever the group admin remembers. A meetup is arranged in a private message and then forgotten.</p>
+    <p>Linklet had to solve three problems at once: make discovery local and searchable, make identity visible enough to trust, and make the handoff conversation possible without leaving the product. It also had to work on a phone, on a student data bundle, without a desktop.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">The system</p>
+    <h2>A marketplace and a messaging product, not a listing board.</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>Linklet is a React single-page application backed by an Express API. The browser talks to the API directly, with HttpOnly cookies, CSRF protection, and CORS as part of the production contract. The frontend is served from Vercel; the API and Socket.IO server run on Google Cloud Run. PostgreSQL lives on Supabase, accessed through the session pooler over TLS.</p>
+    <p>That separation is deliberate. The marketplace has long-lived data and short-lived events. Listings, profiles, offers, and payments belong in PostgreSQL. Messages, unread counts, and live notifications belong on a socket. Keeping the API stateless enough to run on Cloud Run made deployment repeatable, but it also meant the realtime path needed a fallback when a WebSocket could not be established.</p>
+  </div>
+</section>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-home.webp" alt="Linklet home page with the headline Buy and sell within your campus, category links, and a featured listing" width="1600" height="900" loading="lazy" decoding="async">
+  <figcaption>The public entry point. The marketplace is organised around a campus, a category, and a listing, not around a generic social feed.</figcaption>
+</figure>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/linklet-architecture.svg" alt="Linklet architecture: React on Vercel, Express and Socket.IO on Google Cloud Run, Supabase PostgreSQL, and integrations for Cloudinary, Resend, Africa's Talking, M-Pesa Daraja, Google OAuth and Web Push" width="1200" height="700" loading="lazy" decoding="async">
+  <figcaption>The production topology. The browser calls Cloud Run directly, so auth cookies, CSRF checks, and CORS are part of the system, not an afterthought. <a href="{{ROOT}}assets/img/linklet-architecture.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
+</figure>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">What it does</p>
+    <h2>The features that carry the product</h2>
+  </div>
+  <div class="case-section-body">
+    <ul class="feature-list">
+      <li><strong>Student accounts.</strong> Email and password, Google sign-in, email OTP, phone OTP, optional two-factor authentication, and student verification.</li>
+      <li><strong>Listings that behave like listings.</strong> Images, categories, condition, location, quantity, negotiation, university targeting, saved items, trending items, recently sold items, and recommendations.</li>
+      <li><strong>Search and filters.</strong> Campus, category, price, and condition filtering across the inventory.</li>
+      <li><strong>Buyer and seller profiles.</strong> Ratings, response-rate badges, and verification state.</li>
+      <li><strong>Messaging built for a transaction.</strong> Text, images, documents, voice notes, replies, reactions, blocking, and unread counts.</li>
+      <li><strong>Offers and completion.</strong> Offers, purchase confirmations, and ratings on both sides.</li>
+      <li><strong>Listing promotion.</strong> M-Pesa Daraja STK Push is integrated for promoting a listing.</li>
+      <li><strong>Admin tools.</strong> Users, listings, reports, payments, student verification, growth statistics, and maintenance settings.</li>
+      <li><strong>Installable PWA.</strong> Offline handling, dark mode, mobile navigation, and web push notifications.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Decisions that mattered</p>
+    <h2>What made it more than a CRUD app</h2>
+  </div>
+  <div class="case-section-body">
+    <dl class="decision-list">
+      <div>
+        <dt>Realtime with a fallback</dt>
+        <dd>Socket.IO handles live messages and notifications. The socket auth path prefers polling and then upgrades to a WebSocket. That change made reconnects more reliable on the deployed backend, where a cold start or a proxy can interrupt a long-lived connection.</dd>
+      </div>
+      <div>
+        <dt>Migrations that run at boot</dt>
+        <dd>The schema is not a manual step. Idempotent migrations run before the API accepts requests, and the baseline schema remains a reference. It means a fresh environment can come up without a separate database ceremony.</dd>
+      </div>
+      <div>
+        <dt>Auth cookies that survive the split</dt>
+        <dd>The frontend and API are on different hosts. The production setup uses HttpOnly cookies, a CSRF double-submit cookie, and explicit CORS. That is more work than a bearer token in local storage, and it is the right trade for a marketplace with account and payment surfaces.</dd>
+      </div>
+      <div>
+        <dt>The maintenance-mode lockout</dt>
+        <dd>A maintenance-mode bypass and the optional-auth path did not read the same cookie token. Admins could be locked out of the very screen they needed. The fix made the maintenance check read the same token as the rest of the auth path and wired CSRF into the flow. It is the kind of bug that only appears when two reasonable subsystems meet.</dd>
+      </div>
+      <div>
+        <dt>Payments as a narrow surface</dt>
+        <dd>M-Pesa is used for listing promotion, not as a general wallet. Keeping the payment surface narrow made the callback handling and the failure states easier to reason about. The integration is implemented; the case file does not claim payment volume or business results.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">What I built</p>
+    <h2>Product, full stack, deployment</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>I founded Linklet and built the product across the frontend, API, database, and deployment. That included the data model, the listing and messaging flows, the admin surface, the integrations, and the production configuration. I also handled the domain and the operating details that make a deployed product feel real.</p>
+    <p>The engineering work was not only feature delivery. It was learning where the system was fragile: a socket that dropped, a migration that had to be safe to rerun, an admin route that depended on the order in which auth loaded. Those are the parts that turn a codebase into a product.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Evidence</p>
+    <h2>The public marketplace</h2>
+  </div>
+  <div class="case-section-body">
+    <figure class="case-figure">
+      <img src="{{ROOT}}assets/img/linklet-listings.webp" alt="Linklet browse listings page showing category filters and listings for a fridge, toiletries, a fan, sneakers, and textbooks" width="1600" height="900" loading="lazy" decoding="async">
+      <figcaption>The public listing feed, captured on 10 November 2026. The site is live at <a href="https://www.linklet.co.ke" rel="noopener">linklet.co.ke</a>. The listing count changes with the marketplace.</figcaption>
+    </figure>
+    <p class="figure-note">Authenticated screenshots of chat and admin flows are being prepared. They are not shown until the data in them has been checked and blurred.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Status</p>
+    <h2>Live, and still being hardened</h2>
+  </div>
+  <div class="case-section-body">
+    <div class="status-panel">
+      <p><span class="status status-live">Live</span></p>
+      <p>The marketplace is live at <a href="https://www.linklet.co.ke" rel="noopener">linklet.co.ke</a>. The core flows are implemented: accounts, listings, search, messaging, offers, ratings, admin tools, and the PWA shell.</p>
+      <p>What this case file does not claim: user numbers, revenue, processed payment volume, or retention. Those are business metrics, not engineering evidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Next</p>
+    <h2>What comes after the first version</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>The next product work is broader listing categories and business advertising. Those are future plans, not shipped features. The engineering work continues on the less visible parts: keeping the realtime path reliable, tightening moderation and admin flows, and making the mobile experience hold up on the connections students actually have.</p>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="mica-title mica-desc">
+  <title id="mica-title">MICA local-first architecture</title>
+  <desc id="mica-desc">The browser console talks to a local server on 127.0.0.1. A tool runner, approval gate, SQLite memory and audit trail, and the desktop companion all run locally. Model requests go out only when a provider is configured; no keys or transcripts are stored by MICA.</desc>
+  <rect width="1200" height="700" fill="#101513"/>
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" fill="#EDEFEA">
+    <text x="48" y="54" font-size="15" font-weight="600" letter-spacing="2.4" fill="#56C7B2">MICA / LOCAL-FIRST ASSISTANT</text>
+    <text x="48" y="88" font-size="13" fill="#9AA59E">Windows · browser console · native companion · provider boundary</text>
+    <line x1="48" y1="108" x2="1152" y2="108" stroke="#2B3531"/>
+
+    <!-- local boundary -->
+    <rect x="48" y="136" width="690" height="468" rx="4" fill="none" stroke="#3A4A43" stroke-dasharray="6 5"/>
+    <text x="68" y="164" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.6" fill="#D8A25C">LOCAL MACHINE · 127.0.0.1</text>
+
+    <!-- browser console -->
+    <rect x="76" y="190" width="250" height="150" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="96" y="220" font-size="15" font-weight="600">Browser console</text>
+    <text x="96" y="247" font-size="12" fill="#9AA59E">Chat · voice · approvals</text>
+    <text x="96" y="268" font-size="12" fill="#9AA59E">Schedule · memory · settings</text>
+    <text x="96" y="301" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">WEB SPEECH · SSE · FETCH</text>
+
+    <!-- native companion -->
+    <rect x="76" y="372" width="250" height="150" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="96" y="402" font-size="15" font-weight="600">Native companion</text>
+    <text x="96" y="429" font-size="12" fill="#9AA59E">Animated character · tray</text>
+    <text x="96" y="450" font-size="12" fill="#9AA59E">Win+M · lipsync · local STT</text>
+    <text x="96" y="483" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">C# · LOCAL PIPE</text>
+
+    <!-- server -->
+    <rect x="378" y="190" width="330" height="332" rx="4" fill="#17201C" stroke="#56C7B2"/>
+    <text x="398" y="220" font-size="15" font-weight="600">Local server</text>
+    <text x="398" y="243" font-size="12" fill="#9AA59E">Node.js · bound to 127.0.0.1</text>
+
+    <rect x="398" y="262" width="290" height="54" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="412" y="285" font-size="12" font-weight="600">Tool runner</text>
+    <text x="412" y="303" font-size="11" fill="#9AA59E">31 schemas · files, apps, browser, screen</text>
+
+    <rect x="398" y="326" width="290" height="54" rx="3" fill="#101513" stroke="#D8A25C"/>
+    <text x="412" y="349" font-size="12" font-weight="600" fill="#D8A25C">Approval gate</text>
+    <text x="412" y="367" font-size="11" fill="#9AA59E">Strict · Assisted · Trusted · fail-closed</text>
+
+    <rect x="398" y="390" width="290" height="54" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="412" y="413" font-size="12" font-weight="600">SQLite state</text>
+    <text x="412" y="431" font-size="11" fill="#9AA59E">Memory · tasks · jobs · audit · quota</text>
+
+    <rect x="398" y="454" width="290" height="48" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="412" y="476" font-size="12" font-weight="600">Companion bridge</text>
+    <text x="412" y="494" font-size="11" fill="#9AA59E">State vocabulary · one-way reply stream</text>
+
+    <!-- windows actions -->
+    <rect x="76" y="550" width="632" height="54" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="96" y="573" font-size="12" font-weight="600">Windows surface</text>
+    <text x="96" y="592" font-size="11" fill="#9AA59E">Approved folders · daily apps · Chrome CDP · clipboard · OBS · system commands</text>
+
+    <!-- provider boundary -->
+    <rect x="786" y="136" width="366" height="468" rx="4" fill="#101513" stroke="#3A4A43" stroke-dasharray="2 5"/>
+    <text x="806" y="164" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.6" fill="#D8A25C">EXTERNAL · ONLY WHEN CONFIGURED</text>
+
+    <rect x="812" y="190" width="314" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="832" y="220" font-size="14" font-weight="600">Gemini</text>
+    <text x="832" y="243" font-size="11" fill="#9AA59E">Default reasoning provider</text>
+    <text x="832" y="263" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">CHAT · RESEARCH · SCREEN VISION</text>
+
+    <rect x="812" y="298" width="314" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="832" y="328" font-size="14" font-weight="600">Groq</text>
+    <text x="832" y="351" font-size="11" fill="#9AA59E">Cheap first responder · automatic backup</text>
+    <text x="832" y="371" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">CONVERSATION · FAILOVER</text>
+
+    <rect x="812" y="406" width="314" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="832" y="436" font-size="14" font-weight="600">OpenAI</text>
+    <text x="832" y="459" font-size="11" fill="#9AA59E">Optional provider, explicit opt-in</text>
+    <text x="832" y="479" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">NO AUTOMATIC BACKUP</text>
+
+    <rect x="812" y="522" width="314" height="58" rx="4" fill="#101513" stroke="#3A4A43"/>
+    <text x="832" y="545" font-size="11" fill="#EDEFEA">Provider requests carry the prompt and</text>
+    <text x="832" y="563" font-size="11" fill="#EDEFEA">relevant tool results. Keys stay local.</text>
+
+    <!-- arrows -->
+    <line x1="326" y1="265" x2="378" y2="265" stroke="#56C7B2" stroke-width="1.5"/>
+    <polygon points="378,265 369,260 369,270" fill="#56C7B2"/>
+    <line x1="326" y1="447" x2="378" y2="447" stroke="#56C7B2" stroke-width="1.5"/>
+    <polygon points="378,447 369,442 369,452" fill="#56C7B2"/>
+
+    <line x1="708" y1="235" x2="786" y2="235" stroke="#D8A25C" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <polygon points="786,235 777,230 777,240" fill="#D8A25C"/>
+    <text x="719" y="224" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#D8A25C">PROMPT</text>
+
+    <line x1="555" y1="522" x2="555" y2="550" stroke="#3A4A43" stroke-width="1.5"/>
+    <text x="565" y="542" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#9AA59E">GATED</text>
+
+    <text x="48" y="654" font-size="11" fill="#9AA59E">Verified against MICA README and DEVELOPMENT-STATUS · 2026-10-25</text>
+    <text x="48" y="674" font-size="11" fill="#6F7A73">Status: in development · v0.1.0 · local-first by design</text>
+  </g>
+</svg>

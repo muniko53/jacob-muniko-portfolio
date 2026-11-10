@@ -1,0 +1,24 @@
+{
+  "slug": "linklet-seller-report",
+  "order": 3,
+  "name": "Linklet Seller Report",
+  "category": "Automation",
+  "status": "Completed",
+  "summary": "A weekly seller performance email that reads Linklet's PostgreSQL data and sends each seller a view, save, and active-listing summary through Resend.",
+  "problem": "Sellers on a marketplace need to know whether their listings are getting attention. Without a weekly nudge, a listing that needs a better photo or a price change just sits there.",
+  "solution": "A Node.js job queries seller and listing activity, builds a compact HTML email with total views, saves, active listings, a per-listing table, and one practical tip, then delivers it through Resend. The job is designed to use a read-only database user and keeps credentials in environment variables.",
+  "stack": [
+    "Node.js",
+    "PostgreSQL",
+    "Resend",
+    "HTML email"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar automation",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

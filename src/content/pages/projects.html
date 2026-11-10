@@ -1,0 +1,43 @@
+<section class="library-hero">
+  <div class="shell">
+    <p class="section-label">Project register</p>
+    <h1>Everything else I have built.</h1>
+    <p class="library-lede">Add-ons, bots, reports, and experiments. Some are finished tools. Some are still moving. The status line tells you which.</p>
+
+    <div class="library-tools" role="search" aria-label="Filter projects">
+      <div class="search-field">
+        <label for="project-search">Search projects</label>
+        <input id="project-search" type="search" placeholder="Name, description, or technology" autocomplete="off">
+      </div>
+      <div class="filter-select">
+        <label for="category-filter">Category</label>
+        <select id="category-filter">
+          <option value="">All categories</option>
+          {{CATEGORY_OPTIONS}}
+        </select>
+      </div>
+      <div class="filter-select">
+        <label for="status-filter">Status</label>
+        <select id="status-filter">
+          <option value="">All statuses</option>
+          {{STATUS_OPTIONS}}
+        </select>
+      </div>
+      <button class="filter-clear" id="clear-filters" type="button">Clear filters</button>
+    </div>
+
+    <p class="library-count" id="library-count" aria-live="polite">{{COUNT}} projects</p>
+  </div>
+</section>
+
+<section class="library-list-section">
+  <div class="shell">
+    <div class="register library-list" id="library-list">
+      {{ROWS}}
+    </div>
+    <p class="empty-state" id="empty-state" hidden>No projects match that search. Try a different term or clear the filters.</p>
+    <noscript>
+      <p class="form-note">Filtering needs JavaScript. All projects are listed on this page.</p>
+    </noscript>
+  </div>
+</section>

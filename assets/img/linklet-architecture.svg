@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="linklet-title linklet-desc">
+  <title id="linklet-title">Linklet production architecture</title>
+  <desc id="linklet-desc">A student browser or installed progressive web app loads the React single-page application from Vercel. The browser calls an Express and Socket.IO API on Google Cloud Run. The API uses Supabase PostgreSQL, Cloudinary for files, Resend for email, Africa's Talking for SMS, M-Pesa Daraja for STK Push, Google OAuth, and Web Push.</desc>
+  <rect width="1200" height="700" fill="#101513"/>
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" fill="#EDEFEA">
+    <text x="48" y="54" font-size="15" font-weight="600" letter-spacing="2.4" fill="#56C7B2">LINKLET / PRODUCTION TOPOLOGY</text>
+    <text x="48" y="88" font-size="13" fill="#9AA59E">Campus marketplace · React SPA · Express API · Supabase PostgreSQL</text>
+    <line x1="48" y1="108" x2="1152" y2="108" stroke="#2B3531"/>
+
+    <!-- client -->
+    <rect x="48" y="160" width="230" height="120" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="68" y="190" font-size="15" font-weight="600">Student client</text>
+    <text x="68" y="216" font-size="12" fill="#9AA59E">Browser or installed PWA</text>
+    <text x="68" y="237" font-size="12" fill="#9AA59E">Mobile-first · dark mode</text>
+    <text x="68" y="262" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">REACT 19 · TAILWIND 3</text>
+
+    <!-- vercel -->
+    <rect x="330" y="160" width="230" height="120" rx="4" fill="#17201C" stroke="#56C7B2"/>
+    <text x="350" y="190" font-size="15" font-weight="600">Vercel</text>
+    <text x="350" y="216" font-size="12" fill="#9AA59E">React single-page app</text>
+    <text x="350" y="237" font-size="12" fill="#9AA59E">Static bundle at linklet.co.ke</text>
+    <text x="350" y="262" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">CDN · SPA ROUTING</text>
+
+    <!-- cloud run -->
+    <rect x="640" y="150" width="260" height="230" rx="4" fill="#17201C" stroke="#D8A25C"/>
+    <text x="660" y="180" font-size="15" font-weight="600">Google Cloud Run</text>
+    <text x="660" y="203" font-size="12" fill="#9AA59E">us-central1 · Express 4</text>
+
+    <rect x="660" y="220" width="220" height="42" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="674" y="246" font-size="11" fill="#EDEFEA">REST API · 20 route modules</text>
+
+    <rect x="660" y="272" width="220" height="42" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="674" y="298" font-size="11" fill="#EDEFEA">Socket.IO · realtime chat</text>
+
+    <rect x="660" y="324" width="220" height="42" rx="3" fill="#101513" stroke="#3A4A43"/>
+    <text x="674" y="350" font-size="11" fill="#EDEFEA">Cron jobs · expiry · push</text>
+
+    <!-- database -->
+    <rect x="980" y="160" width="172" height="120" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="1000" y="190" font-size="15" font-weight="600">Supabase</text>
+    <text x="1000" y="216" font-size="12" fill="#9AA59E">PostgreSQL 15</text>
+    <text x="1000" y="237" font-size="12" fill="#9AA59E">Session pooler · TLS</text>
+    <text x="1000" y="262" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">MARKETPLACE DATA</text>
+
+    <!-- services row -->
+    <rect x="48" y="420" width="192" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="66" y="448" font-size="12" font-weight="600">Cloudinary</text>
+    <text x="66" y="470" font-size="11" fill="#9AA59E">Listing images, chat files</text>
+    <text x="66" y="489" font-size="11" fill="#9AA59E">and voice notes</text>
+
+    <rect x="264" y="420" width="192" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="282" y="448" font-size="12" font-weight="600">Resend</text>
+    <text x="282" y="470" font-size="11" fill="#9AA59E">OTP, welcome, reset</text>
+    <text x="282" y="489" font-size="11" fill="#9AA59E">and admin alerts</text>
+
+    <rect x="480" y="420" width="192" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="498" y="448" font-size="12" font-weight="600">Africa's Talking</text>
+    <text x="498" y="470" font-size="11" fill="#9AA59E">Phone verification OTPs</text>
+    <text x="498" y="489" font-size="11" fill="#9AA59E">over SMS</text>
+
+    <rect x="696" y="420" width="192" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="714" y="448" font-size="12" font-weight="600">M-Pesa Daraja</text>
+    <text x="714" y="470" font-size="11" fill="#9AA59E">STK Push for listing</text>
+    <text x="714" y="489" font-size="11" fill="#9AA59E">promotion</text>
+
+    <rect x="912" y="420" width="240" height="92" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="930" y="448" font-size="12" font-weight="600">Google OAuth · Web Push</text>
+    <text x="930" y="470" font-size="11" fill="#9AA59E">Social sign-in and browser</text>
+    <text x="930" y="489" font-size="11" fill="#9AA59E">notifications with VAPID</text>
+
+    <!-- arrows -->
+    <line x1="278" y1="220" x2="330" y2="220" stroke="#56C7B2" stroke-width="1.5"/>
+    <polygon points="330,220 321,215 321,225" fill="#56C7B2"/>
+    <line x1="560" y1="220" x2="640" y2="220" stroke="#56C7B2" stroke-width="1.5"/>
+    <polygon points="640,220 631,215 631,225" fill="#56C7B2"/>
+    <text x="566" y="210" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">REST / SOCKET</text>
+
+    <line x1="770" y1="380" x2="770" y2="420" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="900" y1="280" x2="980" y2="220" stroke="#3A4A43" stroke-width="1.5"/>
+    <text x="890" y="262" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#9AA59E">SQL / TLS</text>
+
+    <!-- note -->
+    <rect x="48" y="560" width="1104" height="76" rx="4" fill="#101513" stroke="#2B3531"/>
+    <text x="68" y="588" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.4" fill="#D8A25C">PRODUCTION CONTRACT</text>
+    <text x="68" y="613" font-size="12" fill="#9AA59E">The browser calls Cloud Run directly, so CORS, HttpOnly cookies, CSRF double-submit checks and rate limiting are part of the deployed system. Vercel serves the SPA only.</text>
+
+    <text x="48" y="672" font-size="11" fill="#6F7A73">Verified against linklet/README.md and ARCHITECTURE.md · live API health checked 2026-11-10</text>
+  </g>
+</svg>

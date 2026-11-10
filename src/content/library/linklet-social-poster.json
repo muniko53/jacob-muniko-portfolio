@@ -1,0 +1,25 @@
+{
+  "slug": "linklet-social-poster",
+  "order": 6,
+  "name": "Linklet Social Poster",
+  "category": "Automation",
+  "status": "In Development",
+  "summary": "A daily social media poster that drafts a Linklet listing post, sends it to Telegram for approval, and publishes to Facebook, Instagram, Pinterest, and TikTok.",
+  "problem": "A marketplace needs a consistent social presence, but posting every day by hand is easy to skip. Automating it without approval is worse: a bad caption or the wrong image goes out under the brand.",
+  "solution": "A scheduled Node.js worker pulls a real listing image, generates a caption with Groq, and sends the draft to an admin on Telegram. Nothing publishes until the admin approves, edits, or rejects it. Approval sends the post through Zernio to the connected platforms, with preview and post-now modes for testing.",
+  "stack": [
+    "Node.js",
+    "Groq",
+    "Zernio",
+    "Telegram Bot API",
+    "node-cron"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar automation",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

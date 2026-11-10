@@ -1,0 +1,43 @@
+{
+  "slug": "linklet",
+  "order": 1,
+  "title": "Linklet",
+  "category": "Marketplace platform",
+  "status": "Live",
+  "summary": "A campus marketplace for Kenyan university students, with verified accounts, searchable listings, real-time messaging, offers, ratings, and admin tools.",
+  "card": "A campus marketplace built from zero: React on Vercel, Express and Socket.IO on Cloud Run, PostgreSQL on Supabase, and a messaging product that had to feel safe enough to use.",
+  "role": "Founder. Product design, full-stack development, deployment.",
+  "timeline": "Ongoing",
+  "stack": [
+    "React 19",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "Supabase",
+    "Socket.IO",
+    "Cloud Run",
+    "Vercel"
+  ],
+  "links": [
+    {
+      "label": "Visit Linklet",
+      "url": "https://www.linklet.co.ke",
+      "type": "primary",
+      "external": true
+    },
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "secondary",
+      "internal": true
+    }
+  ],
+  "hero": "linklet-listings.webp",
+  "heroAlt": "Linklet browse listings page with category filters and listings for a fridge, toiletries, a fan, sneakers, and textbooks",
+  "heroWidth": 1600,
+  "heroHeight": 900,
+  "heroCaption": "The public listing feed, captured 10 November 2026.",
+  "seoTitle": "Linklet case file — Jacob Muniko",
+  "seoDescription": "How Linklet, a campus marketplace for Kenyan university students, was built with React, Express, PostgreSQL, Socket.IO, Cloud Run, and Vercel.",
+  "ogImage": "og-linklet.png"
+}

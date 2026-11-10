@@ -1,0 +1,32 @@
+{
+  "slug": "portfolio-v3",
+  "order": 7,
+  "name": "Portfolio V3",
+  "category": "Web and tooling",
+  "status": "In Development",
+  "summary": "This site: a zero-dependency Node generator that builds a static portfolio from JSON and HTML sources, with validation, a light/dark theme, and no advertising trackers.",
+  "problem": "The previous portfolio was a single hand-edited HTML file. Case studies, project data, navigation, and metadata were duplicated across pages, so every content change risked an inconsistency or a broken link.",
+  "solution": "A small Node build script reads JSON and HTML source files, validates required fields and statuses, and writes static pages to the repository root for GitHub Pages. The output has no framework runtime, no npm dependencies, and no build service. Theme preference is applied before first paint, navigation is shared, and the project library is filtered in plain JavaScript.",
+  "stack": [
+    "Node.js",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "GitHub Pages"
+  ],
+  "notes": "<p class=\"figure-note\">The source is public. The generated site is plain HTML, CSS, and a small amount of JavaScript; the build step exists to keep content and structure in one place.</p>",
+  "links": [
+    {
+      "label": "View the source",
+      "url": "https://github.com/muniko53/jacob-muniko-portfolio",
+      "type": "primary",
+      "external": true
+    },
+    {
+      "label": "Discuss a similar build",
+      "url": "contact/",
+      "type": "secondary",
+      "internal": true
+    }
+  ]
+}
