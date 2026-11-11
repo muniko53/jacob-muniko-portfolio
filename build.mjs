@@ -204,7 +204,6 @@ function footerFor(root) {
     <div class="foot-base">
       <span>© ${new Date().getFullYear()} Jacob Muniko</span>
       <span>No advertising trackers. No cookie banner.</span>
-      <span>Plain HTML, CSS and a little JavaScript.</span>
     </div>
   </div>
 </footer>`;
