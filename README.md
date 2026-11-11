@@ -20,7 +20,17 @@ npm run build
 
 This reads `src/`, validates the content, and writes `index.html`, `work/`,
 `projects/`, `services/`, `about/`, `contact/`, `privacy/`, `404.html`,
-`sitemap.xml`, `robots.txt`, and `assets/` to the repository root.
+`sitemap.xml`, `robots.txt`, `site.webmanifest`, and `assets/` to the repository
+root.
+
+## Check
+
+```bash
+npm run qa
+```
+
+This checks local links, template placeholders, duplicate IDs, required page
+metadata, and unreferenced assets.
 
 ## Preview
 
@@ -28,12 +38,29 @@ This reads `src/`, validates the content, and writes `index.html`, `work/`,
 npm run preview
 ```
 
-This starts a local HTTP server on port 4173.
+This starts a zero-dependency Node preview server on port 4173. It resolves
+clean URLs and serves `404.html` for missing paths.
 
 ## Deploy
 
 The repository is deployed from the branch root by GitHub Pages, so the generated
 pages need no settings change. Run `npm run build` before pushing.
+
+## Résumé
+
+`Jacob_Muniko_Resume.pdf` is the public résumé. It is linked from the home hero,
+the About page, and the Contact page. Replace the file in place to update it.
+
+## Icons and share images
+
+```bash
+python tools/make-icons.py
+python tools/make-og.py
+```
+
+`make-icons.py` rebuilds the favicons, touch icon, manifest icons, and
+`favicon.ico` from `src/assets/img/brand-logo.png`. `make-og.py` rebuilds the
+1200 x 630 share images from the current screenshots. Both require Pillow.
 
 ## Layouts
 
@@ -57,3 +84,8 @@ the source and licence links.
 ## Privacy
 
 See [`privacy/`](privacy/) for what this site stores and why.
+
+The Web3Forms access key in `src/content/site.json` is a public form identifier,
+not a secret. It is designed to appear in the generated HTML and only routes
+inquiries to the configured email address. No API secrets, passwords, or private
+keys belong in this repository.

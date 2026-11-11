@@ -185,7 +185,8 @@ function footerFor(root) {
         <span class="brand-mark" aria-hidden="true"><img src="${root}assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
         <span class="brand-name">Jacob Muniko</span>
       </a>
-      <p class="foot-line">Technology builder. ${esc(site.location)}. ${esc(site.timezone)}.</p>
+      <p class="foot-line">${esc(site.tagline)}</p>
+      <p class="foot-line">${esc(site.location)}. ${esc(site.timezone)}.</p>
       <p class="foot-line foot-avail"><span class="dot dot-live" aria-hidden="true"></span>${esc(site.availability)}</p>
     </div>
     <nav class="foot-links" aria-label="Footer">
@@ -227,7 +228,10 @@ function page({
   robots = "index,follow",
 }) {
   const root = rootFor(relFile);
-  const canonical = `${site.url}/${canonicalPath ? `${canonicalPath.replace(/^\/|\/$/g, "")}/` : ""}`;
+  const cleanPath = canonicalPath.replace(/^\/|\/$/g, "");
+  const canonical = cleanPath
+    ? `${site.url}/${cleanPath}${path.extname(cleanPath) ? "" : "/"}`
+    : `${site.url}/`;
   const ogAbsolute = `${site.url}/${ogImage}`;
   const vars = {
     LANG: "en",
@@ -519,7 +523,7 @@ for (const item of library) {
     relFile,
     title: "About — Jacob Muniko",
     description:
-      "Jacob Muniko is a technology builder in Karatina, Kenya, studying Business Management at Karatina University and building web, AI, desktop, and automation software.",
+      "Jacob Muniko is a technology builder in Karatina, Kenya, completing a Bachelor of Education (Arts) at Karatina University while building web, AI, desktop, and automation software.",
     canonicalPath: "about",
     content,
     active: "about",
@@ -572,7 +576,7 @@ for (const item of library) {
     relFile: "404.html",
     title: "Page not found — Jacob Muniko",
     description: "That page does not exist. Browse projects or get in touch.",
-    canonicalPath: "404",
+    canonicalPath: "404.html",
     content: template.replaceAll("{{ROOT}}", "./"),
     robots: "noindex,follow",
   });
@@ -608,6 +612,7 @@ const assetsOut = path.join(OUT, "assets");
 await fs.rm(assetsOut, { recursive: true, force: true });
 await fs.mkdir(assetsOut, { recursive: true });
 await fs.cp(path.join(SRC, "assets"), assetsOut, { recursive: true });
+await fs.copyFile(path.join(SRC, "site.webmanifest"), path.join(OUT, "site.webmanifest"));
 
 /* ------------------------------------------------------------------ */
 /* Report                                                              */

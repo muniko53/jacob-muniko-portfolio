@@ -17,8 +17,8 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | Time zone is East Africa Time (UTC+3) | Contact, availability | Owner brief §24 and §26 | Verified |
 | Positioned as an independent technology builder, not an agency | Global | Owner brief §2 | Verified (direction) |
 | Works across AI, web, desktop, automation, data, product | Global | Owner brief §2; repositories | Verified |
-| "Third-year Business Management student" | Current About | Conflicts with owner's "final semester" statement; exact wording not confirmed | Needs owner input |
-| Studied Business Management (Education major, Business minor) at Karatina University | About | Owner brief §24; publication permission not confirmed | Needs owner input |
+| Bachelor of Education (Arts), Karatina University; teaching subjects Business Studies and Geography; final year; expected graduation around November 2027 | About, Home, About meta | Owner statement, 11 November 2026 (overrides earlier brief §24) | Verified by owner statement |
+| School of Education and Social Sciences, Department of Curriculum Technology and Management | About | Owner statement, 11 November 2026 | Verified by owner statement |
 | Remote generalist AI training / data annotation / response ranking | Current hero and About | Current site copy only; no project or document evidence | Needs owner input |
 | Response time usually within 24 hours | Contact | Current site copy only | Needs owner input |
 | English fluent, Kiswahili native | Contact | Current site copy; not contradicted | Needs owner input |
@@ -26,7 +26,7 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | WhatsApp contact number | Contact | Not supplied | Needs owner input |
 | LinkedIn or other profile URLs | Footer/contact | Not supplied | Needs owner input |
 | Linklet Solutions as a business name | About/footer | GitHub profile lists "Linklet Solutions"; owner brief says leave room for a studio name but do not invent one | Needs owner input |
-| Business registration number `BN-J9S6B52D` | Current Work section | Owner brief §24 forbids publishing it | Remove |
+| Business registration number (redacted) | Current Work section | Owner brief §24 forbids publishing it | Removed |
 
 ---
 
@@ -151,8 +151,8 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | Claim | Where used | Evidence | Status |
 | --- | --- | --- | --- |
 | `photo.jpg` is a portrait of Jacob Muniko | About | Supplied file | Verified (owner-supplied) |
-| `Jacob_Muniko_Resume.pdf` is current | Hero/contact | File exists; text could not be extracted for review | Needs owner input |
-| Résumé may be published publicly | Hero/contact | Owner brief asks to confirm | Needs owner input |
+| `Jacob_Muniko_Resume.pdf` is current | Hero, About, Contact | Supplied by owner 11 November 2026; education section matches the corrected facts. Project sections still describe the older NSE n8n workflow and FilePilot 0.1.0, so the PDF needs a manual refresh. | Needs owner input |
+| Résumé may be published publicly | Hero, About, Contact | Owner supplied the file and instructed that it be linked from the site, 11 November 2026 | Verified by owner statement |
 | GitHub profile is `github.com/muniko53` | Footer/contact | Profile loads; 6 public repositories | Verified |
 | Linklet live URL is `https://www.linklet.co.ke` | Featured work | Domain resolves; API healthy | Verified at audit date |
 | WordCraft demo URL is live | Library | Loads task pane shell | Verified (shell) |

@@ -64,8 +64,8 @@ must be hidden or labelled "Private repository" unless the owner publishes them.
 | --- | --- |
 | The NSE project is described as an **n8n** workflow using **Yahoo Finance**, **Reuters RSS**, **Claude**, and **SMTP**. The code is a **Node.js** bot scheduled by **GitHub Actions**, using **AFX Kenya** for prices, **Google News RSS** for headlines, **Resend** for email, and an **optional self-hosted FreeLLMAPI** gateway with a deterministic fallback. | `projects/nse-bot/README.md`, `package.json`, `.github/workflows/nse-daily-report.yml`, `PLAN.md` |
 | Linklet's backend is described as **Render**. It is **Google Cloud Run** (`us-central1`). | `linklet/README.md`, `linklet/ARCHITECTURE.md` |
-| The site publishes a **business registration number** (`BN-J9S6B52D`). The brief explicitly forbids publishing it. | `index.html` line 632 |
-| "Third-year Business Management student" conflicts with the owner's statement that they are in or have just completed their final semester. | `index.html` line 609 vs. brief §24 |
+| The site published the business registration number. The brief explicitly forbids publishing it. | `index.html` line 632; number redacted from this ledger |
+| Education details were inconsistent with the owner's programme and stage. | `index.html` line 609 vs. brief §24. **Resolved 11 November 2026**: corrected to B.Ed (Arts), Business Studies and Geography, final year, expected November 2027. |
 | A **placeholder testimonial** is published, framed as a placeholder. The brief says remove placeholder social proof. | `index.html` lines 750–760 |
 | "Platform is live and operating" is plausible but unqualified. The API health check supports "live"; "operating" implies business activity that is not verified. | `index.html` line 636 |
 | "Generalist AI training" positioning dilutes the technology-builder identity and is not supported by any project page. | `index.html` hero and About |

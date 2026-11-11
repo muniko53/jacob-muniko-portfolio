@@ -69,8 +69,8 @@
     <text x="68" y="379" font-size="12" fill="#EDEFEA">The AI step is optional. A deterministic commentary fills the gap.</text>
     <text x="68" y="403" font-size="12" fill="#EDEFEA">A dry run writes the report locally before anything is sent.</text>
     <text x="68" y="427" font-size="12" fill="#EDEFEA">No secret is committed; the workflow reads GitHub Actions secrets.</text>
-    <text x="68" y="459" font-size="11" fill="#9AA59E">Earlier versions used per-ticker Alpha Vantage calls and Yahoo, which</text>
-    <text x="68" y="476" font-size="11" fill="#9AA59E">failed on quota and 401s. Both were removed from the data path.</text>
+    <text x="68" y="459" font-size="11" fill="#9AA59E">Earlier versions used per-ticker quote calls and a second price</text>
+    <text x="68" y="476" font-size="11" fill="#9AA59E">source, which failed on quota and 401s. Both were removed from the data path.</text>
 
     <!-- disclaimer -->
     <rect x="48" y="520" width="1104" height="58" rx="4" fill="#17201C" stroke="#D8A25C"/>
