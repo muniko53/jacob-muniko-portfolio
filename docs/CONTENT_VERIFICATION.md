@@ -23,7 +23,7 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | Response time usually within 24 hours | Contact | Current site copy only | Needs owner input |
 | English fluent, Kiswahili native | Contact | Current site copy; not contradicted | Needs owner input |
 | Public contact email is `jacobmuniko53@gmail.com` | Contact | Current site uses it; owner has not confirmed it as the chosen public address | Needs owner input |
-| WhatsApp contact number | Contact | Not supplied | Needs owner input |
+| WhatsApp contact number is `+254727380378` | Contact, footer, privacy | Owner statement, 11 November 2026 | Verified by owner statement |
 | LinkedIn or other profile URLs | Footer/contact | Not supplied | Needs owner input |
 | Linklet Solutions as a business name | About/footer | GitHub profile lists "Linklet Solutions"; owner brief says leave room for a studio name but do not invent one | Needs owner input |
 | Business registration number (redacted) | Current Work section | Owner brief §24 forbids publishing it | Removed |
