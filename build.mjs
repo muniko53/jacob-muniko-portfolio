@@ -301,10 +301,11 @@ function workCard(item, root) {
 </article>`;
 }
 
-function featuredCard(item, root) {
+function featuredCard(item, root, index = 0) {
+  const priority = index < 2 ? ' fetchpriority="high"' : "";
   return `<article class="project-card">
   <a class="project-card-media" href="${root}work/${esc(item.slug)}/" aria-label="${esc(item.title)} case file">
-    <img src="${root}assets/img/${esc(item.hero)}" alt="${esc(item.heroAlt)}" width="${item.heroWidth || 1320}" height="${item.heroHeight || 820}" loading="lazy" decoding="async">
+    <img src="${root}assets/img/${esc(item.hero)}" alt="${esc(item.heroAlt)}" width="${item.heroWidth || 1320}" height="${item.heroHeight || 820}" loading="eager"${priority} decoding="async">
   </a>
   <div class="project-card-body">
     <p class="work-kicker">${esc(item.category)}</p>
@@ -448,7 +449,7 @@ for (const item of work) {
   const template = await read(path.join(SRC, "content/pages/projects.html"));
   const vars = {
     ROOT: root,
-    FEATURED_CARDS: work.map((item) => featuredCard(item, root)).join("\n"),
+    FEATURED_CARDS: work.map((item, index) => featuredCard(item, root, index)).join("\n"),
     ROWS: library.map((item) => libraryRow(item, root)).join("\n"),
     CATEGORY_OPTIONS: categories
       .map((c) => `<option value="${esc(c)}">${esc(c)}</option>`)
