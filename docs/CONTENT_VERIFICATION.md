@@ -19,6 +19,7 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | Works across AI, web, desktop, automation, data, product | Global | Owner brief §2; repositories | Verified |
 | Bachelor of Education (Arts), Karatina University; teaching subjects Business Studies and Geography; final year; expected graduation around November 2027 | About, Home, About meta | Owner statement, 11 November 2026 (overrides earlier brief §24) | Verified by owner statement |
 | School of Education and Social Sciences, Department of Curriculum Technology and Management | About | Owner statement, 11 November 2026 | Verified by owner statement |
+| 12 weeks of teaching practice at Mathaithi Mixed Day Senior School, Karatina; taught Grade 10 Geography and Business Studies under the CBC | About | Owner statement, 11 November 2026 | Verified by owner statement |
 | Remote generalist AI training / data annotation / response ranking | Current hero and About | Current site copy only; no project or document evidence | Needs owner input |
 | Response time usually within 24 hours | Contact | Current site copy only | Needs owner input |
 | English fluent, Kiswahili native | Contact | Current site copy; not contradicted | Needs owner input |
