@@ -49,7 +49,11 @@ pages need no settings change. Run `npm run build` before pushing.
 ## Résumé
 
 `Jacob_Muniko_Resume.pdf` is the public résumé. It is linked from the home hero,
-the About page, and the Contact page. Replace the file in place to update it.
+the About page, and the Contact page.
+
+The source is `docs/resume.html`. Edit that file, open it in Edge or Chrome, and
+print to PDF (A4, default margins) to regenerate `Jacob_Muniko_Resume.pdf`. The
+PDF is two pages and uses only verified claims from the site content.
 
 ## Icons and share images
 

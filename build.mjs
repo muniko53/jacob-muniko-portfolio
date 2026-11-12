@@ -301,11 +301,26 @@ function workCard(item, root) {
 </article>`;
 }
 
+function featuredCard(item, root) {
+  return `<article class="project-card">
+  <a class="project-card-media" href="${root}work/${esc(item.slug)}/" aria-label="${esc(item.title)} case file">
+    <img src="${root}assets/img/${esc(item.hero)}" alt="${esc(item.heroAlt)}" width="${item.heroWidth || 1320}" height="${item.heroHeight || 820}" loading="lazy" decoding="async">
+  </a>
+  <div class="project-card-body">
+    <p class="work-kicker">${esc(item.category)}</p>
+    <h3><a href="${root}work/${esc(item.slug)}/">${esc(item.title)}</a></h3>
+    <p class="work-summary">${esc(item.card)}</p>
+    <p class="work-status"><span class="status ${statusClass(item.status)}">${esc(item.status)}</span><span class="work-stack">${esc(item.stack.slice(0, 3).join(", "))}</span></p>
+    <a class="text-link" href="${root}work/${esc(item.slug)}/">Read the case file</a>
+  </div>
+</article>`;
+}
+
 function libraryRow(item, root) {
   return `<article class="lib-row" data-category="${esc(item.category)}" data-status="${esc(item.status)}" data-search="${esc(`${item.name} ${item.summary} ${item.stack.join(" ")}`.toLowerCase())}">
   <div class="lib-main">
     <p class="lib-meta"><span class="status ${statusClass(item.status)}">${esc(item.status)}</span><span class="lib-category">${esc(item.category)}</span></p>
-    <h2><a href="${root}projects/${esc(item.slug)}/">${esc(item.name)}</a></h2>
+    <h3><a href="${root}projects/${esc(item.slug)}/">${esc(item.name)}</a></h3>
     <p>${esc(item.summary)}</p>
     <p class="lib-stack">${esc(item.stack.join(", "))}</p>
   </div>
@@ -433,6 +448,7 @@ for (const item of work) {
   const template = await read(path.join(SRC, "content/pages/projects.html"));
   const vars = {
     ROOT: root,
+    FEATURED_CARDS: work.map((item) => featuredCard(item, root)).join("\n"),
     ROWS: library.map((item) => libraryRow(item, root)).join("\n"),
     CATEGORY_OPTIONS: categories
       .map((c) => `<option value="${esc(c)}">${esc(c)}</option>`)
@@ -448,7 +464,7 @@ for (const item of work) {
     relFile,
     title: "Projects — Jacob Muniko",
     description:
-      "A library of software projects by Jacob Muniko: AI tools, web applications, automation, data pipelines, and desktop software.",
+      "Case studies and a project register by Jacob Muniko: web applications, AI tools, desktop software, automation, and data pipelines.",
     canonicalPath: "projects",
     content,
     active: "projects",

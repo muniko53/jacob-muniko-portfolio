@@ -152,7 +152,7 @@ Status values: `Verified` · `False` · `Unverified` · `Needs owner input` · `
 | Claim | Where used | Evidence | Status |
 | --- | --- | --- | --- |
 | `photo.jpg` is a portrait of Jacob Muniko | About | Supplied file | Verified (owner-supplied) |
-| `Jacob_Muniko_Resume.pdf` is current | Hero, About, Contact | Supplied by owner 11 November 2026; education section matches the corrected facts. Project sections still describe the older NSE n8n workflow and FilePilot 0.1.0, so the PDF needs a manual refresh. | Needs owner input |
+| `Jacob_Muniko_Resume.pdf` is current | Hero, About, Contact | Regenerated 12 November 2026 from the corrected site content: verified education and teaching practice, current project statuses and stacks, real contact links, no placeholders or legacy claims. Source: `docs/resume.html`. | Verified |
 | Résumé may be published publicly | Hero, About, Contact | Owner supplied the file and instructed that it be linked from the site, 11 November 2026 | Verified by owner statement |
 | GitHub profile is `github.com/muniko53` | Footer/contact | Profile loads; 6 public repositories | Verified |
 | Linklet live URL is `https://www.linklet.co.ke` | Featured work | Domain resolves; API healthy | Verified at audit date |
