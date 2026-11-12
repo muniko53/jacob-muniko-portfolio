@@ -1,8 +1,35 @@
 <section class="library-hero">
   <div class="shell">
-    <p class="section-label">Project register</p>
-    <h1>Everything else I have built.</h1>
-    <p class="library-lede">Add-ons, bots, reports, and experiments. Some are finished tools. Some are still moving. The status line tells you which.</p>
+    <p class="section-label">Projects</p>
+    <h1>Case studies and the wider register.</h1>
+    <p class="library-lede">Four systems with full case files, then the smaller builds, bots, reports, and experiments. The register below filters by category and status.</p>
+  </div>
+</section>
+
+<section class="page-section project-cases">
+  <div class="shell">
+    <div class="section-head">
+      <p class="section-label">Case studies</p>
+      <div class="section-head-main">
+        <h2>Four systems, four constraints.</h2>
+        <p class="section-intro">Each case file starts with the problem, then shows the system, the engineering decisions, and what is actually finished.</p>
+      </div>
+    </div>
+    <div class="project-card-grid">
+      {{FEATURED_CARDS}}
+    </div>
+  </div>
+</section>
+
+<section class="library-hero library-register-hero">
+  <div class="shell">
+    <div class="section-head">
+      <p class="section-label">The register</p>
+      <div class="section-head-main">
+        <h2>Everything else I have built.</h2>
+        <p class="section-intro">Add-ons, bots, reports, and experiments. Some are finished tools. Some are still moving. The status line tells you which.</p>
+      </div>
+    </div>
 
     <div class="library-tools" role="search" aria-label="Filter projects">
       <div class="search-field">
@@ -26,7 +53,7 @@
       <button class="filter-clear" id="clear-filters" type="button">Clear filters</button>
     </div>
 
-    <p class="library-count" id="library-count" aria-live="polite">{{COUNT}} projects</p>
+    <p class="library-count" id="library-count" aria-live="polite">{{COUNT}} projects in the register</p>
   </div>
 </section>
 

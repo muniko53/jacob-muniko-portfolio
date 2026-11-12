@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jacob Muniko — Résumé</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  :root {
+    --ink: #1b1b1b;
+    --soft: #4a4a4a;
+    --muted: #6b6b6b;
+    --rule: #cfd6d1;
+    --accent: #1f5c45;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { background: #e9ece8; }
+  body {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 14mm 15mm;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
+  h1 { margin: 0; font-size: 27pt; line-height: 1; letter-spacing: -0.01em; }
+  .role {
+    margin: 5px 0 0;
+    color: var(--accent);
+    font-size: 10.5pt;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .contact {
+    margin: 8px 0 0;
+    color: var(--soft);
+    font-size: 9pt;
+    line-height: 1.55;
+  }
+  .contact span { white-space: nowrap; }
+  .contact .sep { color: var(--rule); padding: 0 4px; }
+  header { padding-bottom: 10px; border-bottom: 1.5px solid var(--accent); }
+  section { padding-top: 12px; }
+  h2 {
+    margin: 0 0 7px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--accent);
+    font-size: 11.5pt;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  p { margin: 0 0 6px; }
+  .summary { color: var(--soft); }
+  ul { margin: 0; padding-left: 16px; }
+  li { margin-bottom: 3px; }
+  .capabilities li { color: var(--soft); }
+  .capabilities strong { color: var(--ink); }
+  .entry { margin-bottom: 10px; page-break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+  .entry-head h3 { margin: 0; font-size: 11pt; }
+  .entry-head .kind { color: var(--muted); font-size: 8.8pt; }
+  .status {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--accent);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 7.6pt;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .entry p { color: var(--soft); }
+  .stack { margin: 2px 0 0; color: var(--muted); font-size: 8.6pt; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 22px;
+  }
+  .additional { page-break-inside: avoid; }
+  .two-col li { color: var(--soft); }
+  .skill-row { margin-bottom: 5px; color: var(--soft); }
+  .skill-row strong { color: var(--ink); }
+  .education h3 { margin: 0 0 2px; font-size: 11pt; }
+  .education p { color: var(--soft); }
+  .education .meta { color: var(--muted); font-size: 8.8pt; }
+  .note {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 8.6pt;
+  }
+  footer {
+    margin-top: 14px;
+    padding-top: 7px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 8.2pt;
+  }
+  @media screen and (max-width: 760px) {
+    body { padding: 24px 20px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media print {
+    html { background: #fff; }
+    body { margin: 0; padding: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Jacob Muniko</h1>
+  <p class="role">Technology builder — web, AI, desktop, and automation</p>
+  <p class="contact">
+    <span>Karatina, Kenya (EAT, UTC+3)</span><span class="sep">·</span>
+    <span><a href="mailto:jacobmuniko53@gmail.com">jacobmuniko53@gmail.com</a></span><span class="sep">·</span>
+    <span><a href="https://wa.me/254727380378">+254 727 380 378</a></span><br>
+    <span><a href="https://github.com/muniko53">github.com/muniko53</a></span><span class="sep">·</span>
+    <span><a href="https://muniko53.github.io/jacob-muniko-portfolio/">muniko53.github.io/jacob-muniko-portfolio</a></span>
+  </p>
+</header>
+
+<section>
+  <h2>Profile</h2>
+  <p class="summary">I build practical software: web applications, local AI tools, Windows utilities, and automation. I start with the constraint, choose the smallest complete system, and keep going until it holds up in real use. I am in my final year of a Bachelor of Education (Arts) at Karatina University, with teaching subjects in Business Studies and Geography.</p>
+</section>
+
+<section>
+  <h2>Core capabilities</h2>
+  <ul class="capabilities">
+    <li><strong>Web applications:</strong> React, TypeScript, Node.js, Express, PostgreSQL, REST APIs, Socket.IO.</li>
+    <li><strong>AI systems:</strong> Gemini, OpenAI, and Groq APIs; tool calling; approval gates; model fallback; local-first assistants.</li>
+    <li><strong>Desktop software:</strong> Python, PySide6/Qt, SQLite, Windows shell APIs, threaded work, accessibility-aware interfaces.</li>
+    <li><strong>Automation:</strong> GitHub Actions, n8n, scheduled pipelines, Resend, HTML email, CSV and report generation.</li>
+    <li><strong>Delivery:</strong> Git and GitHub, Vercel, Google Cloud Run, packaging, QA, and handover notes.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Selected projects</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Linklet — campus marketplace</h3>
+      <span class="status">Live</span>
+    </div>
+    <p>A campus marketplace for Kenyan university students, with verified accounts, searchable listings, real-time messaging, offers, ratings, and admin tools.</p>
+    <p class="stack">React 19, Node.js, Express, PostgreSQL, Supabase, Socket.IO, Cloud Run, Vercel</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>FilePilot — Windows file intelligence</h3>
+      <span class="status">Beta</span>
+    </div>
+    <p>A local Windows file intelligence and maintenance tool: storage analysis, exact duplicate detection, safe cleanup, diagnostics, and recovery guidance without telemetry or an account.</p>
+    <p class="stack">Python, PySide6, Qt, SQLite, SHA-256, Windows shell APIs, PyInstaller, pytest</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>MICA — local-first AI assistant</h3>
+      <span class="status">In development</span>
+    </div>
+    <p>A local-first desktop assistant for Windows that can use files, applications, a browser, memory, and scheduled tasks, with an approval gate before consequential actions.</p>
+    <p class="stack">Node.js, JavaScript, C# / .NET, SQLite, Gemini, Groq, OpenAI, Chrome DevTools Protocol, SAPI</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>NSE Intelligence Agent — market reporting</h3>
+      <span class="status">Scheduled</span>
+    </div>
+    <p>A weekday NSE market report pipeline: one full-board price fetch, isolated news and analysis sources, a deterministic fallback when no model is available, and email delivery through Resend.</p>
+    <p class="stack">Node.js, GitHub Actions, AFX Kenya, Google News RSS, Resend, FreeLLMAPI, HTML email</p>
+  </div>
+</section>
+
+<section>
+  <h2>Technical skills</h2>
+  <p class="skill-row"><strong>Web and product:</strong> React, TypeScript, Node.js, Express, Tailwind CSS, PostgreSQL, Supabase, REST, Socket.IO.</p>
+  <p class="skill-row"><strong>AI and intelligent systems:</strong> Gemini, OpenAI, Groq, tool calling, approval gates, model fallback, research and evaluation workflows.</p>
+  <p class="skill-row"><strong>Desktop and systems:</strong> Python, PySide6/Qt, SQLite, schema migrations, Windows shell and file APIs, threaded work, accessibility.</p>
+  <p class="skill-row"><strong>Automation and delivery:</strong> GitHub Actions, n8n, Resend, M-Pesa Daraja, Cloudinary, CSV and Excel reports, Vercel, Google Cloud Run, Git and GitHub.</p>
+</section>
+
+<section class="additional">
+  <h2>Additional projects</h2>
+  <ul class="two-col">
+    <li><strong>WordCraft One</strong> — Microsoft Word add-in writing assistant. TypeScript, React, Office.js. In development.</li>
+    <li><strong>Smart Sales Assistant</strong> — WhatsApp sales assistant with an order state machine and React dashboard. Python, Flask, PostgreSQL. In development.</li>
+    <li><strong>Linklet Seller Report</strong> — weekly seller performance email. Node.js, PostgreSQL, Resend. Completed.</li>
+    <li><strong>Email Summary Bot</strong> — morning Gmail digest delivered to WhatsApp. Python, Gmail API, OpenRouter. Completed.</li>
+    <li><strong>Linklet Telegram Support Bot</strong> — multilingual marketplace support bot. Node.js, Telegram Bot API, Groq. Completed.</li>
+    <li><strong>Linklet Social Poster</strong> — daily social post approval and publishing. Node.js, Groq, Zernio. In development.</li>
+    <li><strong>Portfolio V3</strong> — zero-dependency static portfolio generator. Node.js, HTML, CSS, GitHub Pages. In development.</li>
+  </ul>
+</section>
+
+<section class="education">
+  <h2>Education</h2>
+  <h3>Bachelor of Education (Arts)</h3>
+  <p>Karatina University — School of Education and Social Sciences, Department of Curriculum Technology and Management.</p>
+  <p class="meta">Teaching subjects: Business Studies and Geography. Final year; expected to graduate around November 2027.</p>
+</section>
+
+<section class="education">
+  <h2>Teaching practice</h2>
+  <h3>Mathaithi Mixed Day Senior School, Karatina — 12 weeks</h3>
+  <p>Taught Grade 10 Geography and Business Studies under the Competency-Based Curriculum (CBC).</p>
+</section>
+
+<footer>
+  Open for freelance and contract work. Karatina, Kenya (EAT, UTC+3).
+</footer>
+
+</body>
+</html>

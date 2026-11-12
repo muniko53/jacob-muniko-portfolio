@@ -31,7 +31,7 @@
     });
 
     if (count) {
-      count.textContent = `${visible} ${visible === 1 ? "project" : "projects"}`;
+      count.textContent = `${visible} ${visible === 1 ? "project" : "projects"} in the register`;
     }
     if (empty) {
       empty.hidden = visible !== 0;
