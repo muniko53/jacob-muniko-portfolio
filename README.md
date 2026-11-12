@@ -60,11 +60,14 @@ PDF is two pages and uses only verified claims from the site content.
 ```bash
 python tools/make-icons.py
 python tools/make-og.py
+python tools/make-thumbs.py
 ```
 
 `make-icons.py` rebuilds the favicons, touch icon, manifest icons, and
 `favicon.ico` from `src/assets/img/brand-logo.png`. `make-og.py` rebuilds the
-1200 x 630 share images from the current screenshots. Both require Pillow.
+1200 x 630 share images from the current screenshots. `make-thumbs.py` rebuilds
+the 1200 x 750 thumbnails used by the projects page cards, cutting those four
+images from about 394 KB to 152 KB. All three require Pillow.
 
 ## Layouts
 

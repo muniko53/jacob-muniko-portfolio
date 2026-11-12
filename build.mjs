@@ -53,6 +53,16 @@ for (const file of (await fs.readdir(workDir)).filter((f) => f.endsWith(".json")
 }
 work.sort((a, b) => a.order - b.order);
 
+/* Card thumbnails: tools/make-thumbs.py writes a 16:10 crop of each hero.
+   Fall back to the full image when a thumbnail has not been generated. */
+const workThumbs = new Map();
+for (const item of work) {
+  if (!item.hero) continue;
+  const thumb = `thumb-${item.hero}`;
+  const hasThumb = await exists(path.join(SRC, "assets/img", thumb));
+  workThumbs.set(item.slug, hasThumb ? thumb : item.hero);
+}
+
 const libraryDir = path.join(SRC, "content/library");
 const library = [];
 for (const file of (await fs.readdir(libraryDir)).filter((f) => f.endsWith(".json"))) {
@@ -303,9 +313,13 @@ function workCard(item, root) {
 
 function featuredCard(item, root, index = 0) {
   const priority = index < 2 ? ' fetchpriority="high"' : "";
+  const src = workThumbs.get(item.slug) || item.hero;
+  const isThumb = src.startsWith("thumb-");
+  const width = isThumb ? 1200 : item.heroWidth || 1320;
+  const height = isThumb ? 750 : item.heroHeight || 820;
   return `<article class="project-card">
   <a class="project-card-media" href="${root}work/${esc(item.slug)}/" aria-label="${esc(item.title)} case file">
-    <img src="${root}assets/img/${esc(item.hero)}" alt="${esc(item.heroAlt)}" width="${item.heroWidth || 1320}" height="${item.heroHeight || 820}" loading="eager"${priority} decoding="async">
+    <img src="${root}assets/img/${esc(src)}" alt="${esc(item.heroAlt)}" width="${width}" height="${height}" loading="eager"${priority} decoding="async">
   </a>
   <div class="project-card-body">
     <p class="work-kicker">${esc(item.category)}</p>
