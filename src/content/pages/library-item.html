@@ -1,0 +1,70 @@
+<article class="case">
+  <header class="case-hero library-item-hero">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ROOT}}">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ROOT}}projects/">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>{{NAME}}</span>
+      </nav>
+
+      <div class="case-heading">
+        <p class="case-kicker">{{CATEGORY}}<span class="status {{STATUS_CLASS}}">{{STATUS}}</span></p>
+        <h1>{{NAME}}</h1>
+        <p class="case-summary">{{SUMMARY}}</p>
+      </div>
+
+      <div class="case-links">
+        {{LINKS}}
+      </div>
+    </div>
+  </header>
+
+  <div class="shell case-body">
+    <section class="case-section">
+      <div class="case-section-head">
+        <p class="case-label">The problem</p>
+        <h2>What needed to change</h2>
+      </div>
+      <div class="case-section-body">
+        <p>{{PROBLEM}}</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head">
+        <p class="case-label">The build</p>
+        <h2>What I made</h2>
+      </div>
+      <div class="case-section-body">
+        <p>{{SOLUTION}}</p>
+        {{NOTES}}
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head">
+        <p class="case-label">Working inventory</p>
+        <h2>Tools used</h2>
+      </div>
+      <div class="case-section-body">
+        <ul class="stack-list">{{STACK}}</ul>
+      </div>
+    </section>
+  </div>
+
+  <footer class="case-end">
+    <div class="shell case-end-grid">
+      <div>
+        <p class="section-label">Next</p>
+        <h2>Need something like this?</h2>
+        <p>Tell me the constraint. I will tell you whether it is a good fit.</p>
+      </div>
+      <div class="case-end-actions">
+        <a class="btn btn-primary" href="{{ROOT}}contact/">Start a project</a>
+        <a class="text-link" href="{{ROOT}}projects/">Back to the project register</a>
+      </div>
+    </div>
+  </footer>
+</article>

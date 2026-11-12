@@ -1,0 +1,127 @@
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">The constraint</p>
+    <h2>A daily market report that failed in every quiet way.</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>The first version looked finished until it ran. Prices came back as zero because the free data key could not cover the NSE board. Headlines were empty because the news feeds had moved or closed. The AI section said “analysis unavailable” because it pointed at a hosted endpoint that did not exist. A single source failure could take down the whole run.</p>
+    <p>The constraint was not “add more data.” It was to produce a complete, readable report every weekday after market close, even when one source failed, and to be honest about where the numbers came from. The report also had to be useful without an LLM. A model could improve the commentary, but it could not be a dependency.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">The system</p>
+    <h2>One board fetch, isolated sources, a report that always builds.</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>The bot is a Node.js program scheduled by GitHub Actions on weekdays at 17:00 EAT. It fetches the AFX Kenya NSE board once per run and parses every listed counter, including price, daily change, previous close, volume, NASI level, and market cap. Headlines come from Google News RSS. Each source is isolated, so a failure in one becomes a visible gap instead of a crashed run.</p>
+    <p>The analysis layer is optional by design. When a self-hosted FreeLLMAPI gateway is configured, it can generate the commentary. When it is not, a deterministic data-driven fallback covers breadth, movers, sectors, and liquidity. The report never contains an “AI unavailable” placeholder. Delivery is through Resend; if email fails, the HTML report is saved locally and the run exits non-zero so the failure is visible.</p>
+  </div>
+</section>
+
+<figure class="case-figure">
+  <img src="{{ROOT}}assets/img/nse-pipeline.svg" alt="NSE report pipeline: GitHub Actions triggers a Node.js bot, which fetches the AFX Kenya NSE board and Google News RSS, produces deterministic or optional model commentary, renders HTML, and delivers by Resend" width="1200" height="700" loading="lazy" decoding="async">
+  <figcaption>The pipeline. The model is an optional branch, not the spine. Every other step has a deterministic path. <a href="{{ROOT}}assets/img/nse-pipeline.svg" target="_blank" rel="noopener">Open full size</a>.</figcaption>
+</figure>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">What it does</p>
+    <h2>The report, end to end</h2>
+  </div>
+  <div class="case-section-body">
+    <ul class="feature-list">
+      <li><strong>Full-board prices.</strong> Typically 60+ counters across 10 sectors, with price, daily change, previous close, and volume.</li>
+      <li><strong>Market overview.</strong> NASI level and change, market capitalisation, advancers and decliners, average change, and tracked counters.</li>
+      <li><strong>Headlines.</strong> NSE and Kenyan market coverage from Google News RSS.</li>
+      <li><strong>Analysis with a fallback.</strong> Optional FreeLLMAPI commentary, or deterministic breadth, movers, sector, and liquidity commentary.</li>
+      <li><strong>Movers and activity.</strong> Top gainers, top losers, and the most active counters.</li>
+      <li><strong>Sector tables.</strong> Symbol, company, price, change, previous close, and volume for each sector.</li>
+      <li><strong>Email-safe HTML.</strong> A clean financial document with no emojis or icon characters.</li>
+      <li><strong>Dry-run preview.</strong> <code>npm run dry-run</code> writes an HTML file for inspection without sending email.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Decisions that mattered</p>
+    <h2>Resilience is the feature</h2>
+  </div>
+  <div class="case-section-body">
+    <dl class="decision-list">
+      <div>
+        <dt>One request instead of one per ticker</dt>
+        <dd>Fetching a quote per counter exhausted the free API quota almost immediately. The AFX Kenya board provides the full list in one request. That change removed the quota failure mode and made the run cheaper and faster.</dd>
+      </div>
+      <div>
+        <dt>Every source is isolated</dt>
+        <dd>Prices, headlines, analysis, and delivery each have their own failure path. A dead RSS feed does not remove the price tables. A missing model key does not remove the report. The run reports what happened rather than collapsing into a generic error.</dd>
+      </div>
+      <div>
+        <dt>A deterministic fallback, not a placeholder</dt>
+        <dd>The fallback commentary is generated from the session data: breadth, the largest movers, sector direction, and liquidity. It is less fluid than a model, and it is always available. The report is complete without a provider account.</dd>
+      </div>
+      <div>
+        <dt>Email HTML is its own target</dt>
+        <dd>Email clients are not browsers. The template uses tables, inline-safe styling, and no external icons. The output is designed for an executive reader, not for a screenshot.</dd>
+      </div>
+      <div>
+        <dt>Secrets live in the runner</dt>
+        <dd>The workflow reads Resend and optional model credentials from GitHub Actions secrets. The repository contains only placeholders. A failed send saves the report locally and exits non-zero.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">What I built</p>
+    <h2>The pipeline, the fallback, and the report</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>I rebuilt the bot around the failure modes I could see: a single board fetch, source-level isolation, a deterministic analysis path, an email-safe template, a dry-run mode, and a workflow that does not depend on a local machine. I also removed the incorrect data paths rather than leaving them as decorative fallbacks.</p>
+    <p>The result is a small system with a clear contract: every weekday, produce a report. If a source is down, say so in the report. If email fails, keep the file and fail loudly. The report is generated with data from AFX Kenya and Google News RSS, and the optional commentary uses a self-hosted FreeLLMAPI gateway.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Evidence</p>
+    <h2>A generated report</h2>
+  </div>
+  <div class="case-section-body">
+    <figure class="case-figure case-figure-report">
+      <img src="{{ROOT}}assets/img/nse-report.webp" alt="NSE Daily Market Report email showing the market overview, analysis, top movers, and sector tables" width="1200" height="1600" loading="lazy" decoding="async">
+      <figcaption>A report generated on 8 November 2026. The template carries “Linklet Market Intelligence” branding from an earlier iteration; the pipeline is the NSE bot described here. Market values are a dated snapshot, not current prices.</figcaption>
+    </figure>
+    <div class="callout callout-warn">
+      <p><strong>Not financial advice.</strong> This is an automated market report. It is a data and engineering project, not an investment recommendation or a trading system.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Status</p>
+    <h2>Scheduled, with a verified dry run</h2>
+  </div>
+  <div class="case-section-body">
+    <div class="status-panel">
+      <p><span class="status status-auto">Scheduled</span></p>
+      <p>The GitHub Actions workflow is configured for weekdays at 17:00 EAT after market close. A dry run produced 63 counters across 10 sectors, 10 headlines, data-driven analysis, zero emoji characters, and no “unavailable” placeholders. A live send was accepted by Resend.</p>
+      <p>What this case file does not claim: investment performance, subscriber numbers, or uninterrupted daily delivery. The workflow depends on the AFX Kenya page structure and Google News RSS; both can change.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-section-head">
+    <p class="case-label">Next</p>
+    <h2>Make the silence visible</h2>
+  </div>
+  <div class="case-section-body prose">
+    <p>The next work is operational: add a run heartbeat and an alert when a scheduled report does not arrive, test the parsers against saved fixtures, and keep the data-source assumptions in one place. The report itself is complete enough. The remaining risk is the day a source changes and nobody notices.</p>
+  </div>
+</section>

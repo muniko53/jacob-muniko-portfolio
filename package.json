@@ -1,0 +1,12 @@
+{
+  "name": "jacob-muniko-portfolio",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static portfolio for Jacob Muniko, built with a zero-dependency Node generator.",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node tools/serve.mjs",
+    "qa": "node tools/qa.mjs"
+  }
+}

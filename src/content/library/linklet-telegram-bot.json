@@ -1,0 +1,24 @@
+{
+  "slug": "linklet-telegram-bot",
+  "order": 5,
+  "name": "Linklet Telegram Support Bot",
+  "category": "AI customer support",
+  "status": "Completed",
+  "summary": "A Telegram support assistant for Linklet that answers common marketplace questions in the user's language and points people to the right next step.",
+  "problem": "A small marketplace needs a support presence without a staffed help desk. The same questions about posting, payments, and account safety arrive repeatedly, sometimes in different languages.",
+  "solution": "A Node.js Telegram bot keeps a short per-chat history and sends it to a Groq-hosted model with a Linklet-specific system prompt. It answers in the language the person uses, keeps responses short, and directs uncertain cases to the website or the team. A small HTTP server keeps the service alive on a free host.",
+  "stack": [
+    "Node.js",
+    "Telegram Bot API",
+    "Groq",
+    "Axios"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

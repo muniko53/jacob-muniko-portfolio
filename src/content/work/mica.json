@@ -1,0 +1,39 @@
+{
+  "slug": "mica",
+  "order": 2,
+  "title": "MICA",
+  "category": "Local AI assistant",
+  "status": "In development",
+  "summary": "A local-first desktop assistant for Windows that can use files, applications, a browser, memory, and scheduled tasks, with an approval gate before consequential actions.",
+  "card": "A general-purpose Windows assistant built around a safety model: the server stays local, providers are optional, and anything that changes the machine asks first.",
+  "role": "Solo builder. Architecture, safety model, implementation, testing.",
+  "timeline": "Ongoing",
+  "stack": [
+    "Node.js",
+    "JavaScript",
+    "C# / .NET",
+    "SQLite",
+    "Gemini",
+    "Groq",
+    "OpenAI",
+    "Chrome DevTools Protocol",
+    "SAPI"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ],
+  "heroFit": "contain",
+  "hero": "mica-chat.webp",
+  "heroAlt": "MICA chat console showing the local API boundary notice and a research query with masked user identity",
+  "heroWidth": 1905,
+  "heroHeight": 919,
+  "heroCaption": "The browser console. The yellow banner is the local API boundary: the page cannot reach the server without a launcher token. This is the safety model made visible.",
+  "seoTitle": "MICA case file — Jacob Muniko",
+  "seoDescription": "How MICA, a local-first Windows AI assistant, handles files, apps, browser actions, memory and automation behind an approval gate. Architecture and current status.",
+  "ogImage": "og-mica.png"
+}

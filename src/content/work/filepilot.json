@@ -1,0 +1,37 @@
+{
+  "slug": "filepilot",
+  "order": 3,
+  "title": "FilePilot",
+  "category": "Windows desktop utility",
+  "status": "Beta",
+  "summary": "A local Windows file intelligence and maintenance tool: storage analysis, exact duplicate detection, safe cleanup, diagnostics, and recovery guidance without telemetry or an account.",
+  "card": "A PySide6 and SQLite desktop tool that makes a full drive legible, then makes every destructive action ask, verify, and leave an audit trail.",
+  "role": "Solo builder. Architecture, core logic, interface, packaging, testing.",
+  "timeline": "Ongoing",
+  "stack": [
+    "Python",
+    "PySide6",
+    "Qt",
+    "SQLite",
+    "SHA-256",
+    "Windows shell APIs",
+    "PyInstaller",
+    "pytest"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar project",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ],
+  "hero": "filepilot-storage.webp",
+  "heroAlt": "FilePilot Storage Analysis page in dark mode with a treemap, folder tree, file table, and storage summary",
+  "heroWidth": 1320,
+  "heroHeight": 820,
+  "heroCaption": "Storage Analysis. A headless render from the current build with synthetic sample data.",
+  "seoTitle": "FilePilot case file — Jacob Muniko",
+  "seoDescription": "How FilePilot, a local Windows file intelligence tool, combines storage analysis, exact duplicate detection, and approval-gated deletion in PySide6 and SQLite.",
+  "ogImage": "og-filepilot.png"
+}

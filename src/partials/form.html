@@ -1,0 +1,72 @@
+<form class="contact-form" id="contact-form" action="mailto:{{EMAIL}}" method="post" enctype="text/plain" novalidate data-configured="{{CONFIGURED}}" data-email="{{EMAIL}}" data-whatsapp="{{WHATSAPP}}">
+  <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+      <p class="field-error" id="name-error"></p>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+      <p class="field-error" id="email-error"></p>
+    </div>
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="project-type">Project type</label>
+      <select id="project-type" name="project_type" required aria-describedby="project-type-error">
+        <option value="">Choose one</option>
+        <option value="Web application">Web application</option>
+        <option value="AI tool">AI tool</option>
+        <option value="Workflow automation">Workflow automation</option>
+        <option value="Desktop software">Desktop software</option>
+        <option value="Something else">Something else</option>
+      </select>
+      <p class="field-error" id="project-type-error"></p>
+    </div>
+    <div class="field">
+      <label for="budget">Budget range <span class="optional">(optional)</span></label>
+      <input id="budget" name="budget" type="text" placeholder="A range is fine, or leave it blank">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="timeline">Timeline <span class="optional">(optional)</span></label>
+    <input id="timeline" name="timeline" type="text" placeholder="For example: within six weeks">
+  </div>
+
+  <div class="field">
+    <label for="message">What are you trying to build?</label>
+    <textarea id="message" name="message" rows="7" required minlength="20" aria-describedby="message-hint message-error"></textarea>
+    <p class="field-hint" id="message-hint">The constraint matters more than the stack. What needs to work, who uses it, and what have you tried?</p>
+    <p class="field-error" id="message-error"></p>
+  </div>
+
+  <div class="field field-consent">
+    <label class="check">
+      <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
+      <span>I agree to be contacted about this inquiry. My details will not be added to a mailing list.</span>
+    </label>
+    <p class="field-error" id="consent-error"></p>
+  </div>
+
+  <div class="honeypot" aria-hidden="true">
+    <label for="company">Company</label>
+    <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+    <input type="checkbox" name="botcheck" tabindex="-1" style="display:none">
+  </div>
+
+  <input type="hidden" name="access_key" value="{{ACCESS_KEY}}">
+  <input type="hidden" name="subject" value="New project inquiry from the portfolio">
+  <input type="hidden" name="from_name" value="Jacob Muniko portfolio">
+
+  <p class="form-mode" id="form-mode" hidden></p>
+
+  <div class="form-submit">
+    <button class="btn btn-primary" type="submit" id="submit-button">Open email draft</button>
+    <p class="form-note">Your message goes by email. Nothing is stored on this site. You can also use <a href="mailto:{{EMAIL}}">email</a> or <a href="https://wa.me/{{WHATSAPP}}" rel="noopener">WhatsApp</a>.</p>
+  </div>
+</form>

@@ -1,0 +1,51 @@
+<article class="case">
+  <header class="case-hero">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ROOT}}">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ROOT}}projects/">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>{{TITLE}}</span>
+      </nav>
+
+      <div class="case-heading">
+        <p class="case-kicker">{{CATEGORY}}<span class="status {{STATUS_CLASS}}">{{STATUS}}</span></p>
+        <h1>{{TITLE}}</h1>
+        <p class="case-summary">{{SUMMARY}}</p>
+      </div>
+
+      <dl class="case-meta">
+        {{META_ROWS}}
+      </dl>
+
+      <div class="case-links">
+        {{LINKS}}
+      </div>
+
+      <figure class="case-hero-figure {{HERO_CLASS}}">
+        <img src="{{ROOT}}assets/img/{{HERO}}" alt="{{HERO_ALT}}" width="{{HERO_WIDTH}}" height="{{HERO_HEIGHT}}" fetchpriority="high" decoding="async">
+        {{HERO_CAPTION}}
+        {{HERO_FULL_LINK}}
+      </figure>
+    </div>
+  </header>
+
+  <div class="shell case-body">
+    {{BODY}}
+  </div>
+
+  <footer class="case-end">
+    <div class="shell case-end-grid">
+      <div>
+        <p class="section-label">Next</p>
+        <h2>Have a constraint like this one?</h2>
+        <p>Send the problem, the people it affects, and what a good result looks like. I will tell you honestly whether I can help.</p>
+      </div>
+      <div class="case-end-actions">
+        <a class="btn btn-primary" href="{{ROOT}}contact/">Start a project</a>
+        <a class="text-link" href="{{ROOT}}projects/">Back to the project register</a>
+      </div>
+    </div>
+  </footer>
+</article>

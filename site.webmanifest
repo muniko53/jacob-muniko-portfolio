@@ -1,0 +1,30 @@
+{
+  "name": "Jacob Muniko — Technology builder",
+  "short_name": "Jacob Muniko",
+  "description": "Technology builder creating practical software, intelligent systems, and automation that solve real problems.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0C0F0E",
+  "theme_color": "#0C0F0E",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

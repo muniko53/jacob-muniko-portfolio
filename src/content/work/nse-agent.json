@@ -1,0 +1,37 @@
+{
+  "slug": "nse-agent",
+  "order": 4,
+  "title": "NSE Intelligence Agent",
+  "category": "Automation and market reporting",
+  "status": "Scheduled",
+  "summary": "A weekday NSE market report pipeline: one full-board price fetch, isolated news and analysis sources, a deterministic fallback when no model is available, and email delivery through Resend.",
+  "card": "A scheduled Node.js pipeline that turns a fragile, empty report into a complete daily document with isolated sources, a non-AI fallback, and visible failure states.",
+  "role": "Solo builder. Data pipeline, resilience, report design, scheduling.",
+  "timeline": "Rebuilt 2026",
+  "stack": [
+    "Node.js",
+    "GitHub Actions",
+    "AFX Kenya",
+    "Google News RSS",
+    "Resend",
+    "FreeLLMAPI",
+    "HTML email"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar automation",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ],
+  "heroFit": "crop",
+  "hero": "nse-report.webp",
+  "heroAlt": "NSE Daily Market Report email with a market overview, NASI index, market capitalisation, market analysis, and top movers",
+  "heroWidth": 1200,
+  "heroHeight": 1600,
+  "heroCaption": "A generated report from 8 November 2026. A dated snapshot, not current market data.",
+  "seoTitle": "NSE Intelligence Agent case file — Jacob Muniko",
+  "seoDescription": "How a fragile NSE report bot was rebuilt as a scheduled Node.js pipeline with one full-board fetch, isolated sources, deterministic analysis, and Resend delivery.",
+  "ogImage": "og-nse.png"
+}

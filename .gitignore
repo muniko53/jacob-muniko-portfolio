@@ -1,0 +1,14 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local environment and logs
+.env
+.env.*
+*.log
+
+# Dependencies and editor settings
+node_modules/
+.vscode/
+.idea/

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="nse-title nse-desc">
+  <title id="nse-title">NSE Intelligence Agent pipeline</title>
+  <desc id="nse-desc">A GitHub Actions schedule runs on weekdays at 14:00 UTC, 17:00 East Africa Time. The bot fetches the AFX Kenya NSE board and Google News RSS headlines, normalizes them, and either sends the data to an optional self-hosted FreeLLMAPI gateway or generates deterministic data-driven commentary. It renders an HTML report and delivers it through Resend. The analysis is not financial advice.</desc>
+  <rect width="1200" height="620" fill="#101513"/>
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" fill="#EDEFEA">
+    <text x="48" y="54" font-size="15" font-weight="600" letter-spacing="2.4" fill="#56C7B2">NSE INTELLIGENCE AGENT / PIPELINE</text>
+    <text x="48" y="88" font-size="13" fill="#9AA59E">Scheduled Node.js bot · GitHub Actions · Resend delivery</text>
+    <line x1="48" y1="108" x2="1152" y2="108" stroke="#2B3531"/>
+
+    <!-- schedule -->
+    <rect x="48" y="152" width="196" height="96" rx="4" fill="#17201C" stroke="#D8A25C"/>
+    <text x="66" y="180" font-size="13" font-weight="600">GitHub Actions</text>
+    <text x="66" y="203" font-size="11" fill="#9AA59E">Weekdays · 14:00 UTC</text>
+    <text x="66" y="222" font-size="11" fill="#9AA59E">17:00 EAT · after close</text>
+
+    <!-- sources -->
+    <rect x="292" y="132" width="222" height="62" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="310" y="157" font-size="12" font-weight="600">AFX Kenya NSE board</text>
+    <text x="310" y="177" font-size="11" fill="#9AA59E">Prices, volume, NASI, market cap</text>
+
+    <rect x="292" y="208" width="222" height="62" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="310" y="233" font-size="12" font-weight="600">Google News RSS</text>
+    <text x="310" y="253" font-size="11" fill="#9AA59E">NSE and Kenyan market headlines</text>
+
+    <!-- normalize -->
+    <rect x="562" y="160" width="180" height="96" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="580" y="188" font-size="13" font-weight="600">Normalize</text>
+    <text x="580" y="211" font-size="11" fill="#9AA59E">Parse · isolate sources</text>
+    <text x="580" y="230" font-size="11" fill="#9AA59E">60+ counters · 10 sectors</text>
+
+    <!-- analysis -->
+    <rect x="790" y="132" width="256" height="92" rx="4" fill="#17201C" stroke="#56C7B2"/>
+    <text x="808" y="160" font-size="12" font-weight="600">FreeLLMAPI analysis</text>
+    <text x="808" y="181" font-size="11" fill="#9AA59E">Optional · self-hosted gateway</text>
+    <text x="808" y="200" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#56C7B2">LOCAL OR CONFIGURED ENDPOINT</text>
+
+    <rect x="790" y="240" width="256" height="92" rx="4" fill="#17201C" stroke="#D8A25C"/>
+    <text x="808" y="268" font-size="12" font-weight="600">Deterministic commentary</text>
+    <text x="808" y="289" font-size="11" fill="#9AA59E">Breadth, movers, sectors, liquidity</text>
+    <text x="808" y="308" font-size="10" font-family="IBM Plex Mono, Consolas, monospace" fill="#D8A25C">ALWAYS AVAILABLE FALLBACK</text>
+
+    <!-- report -->
+    <rect x="790" y="380" width="256" height="96" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="808" y="408" font-size="13" font-weight="600">HTML report</text>
+    <text x="808" y="431" font-size="11" fill="#9AA59E">Overview · analysis · movers</text>
+    <text x="808" y="450" font-size="11" fill="#9AA59E">Sector tables · headlines</text>
+
+    <!-- email -->
+    <rect x="1080" y="380" width="72" height="96" rx="4" fill="#17201C" stroke="#3A4A43"/>
+    <text x="1096" y="410" font-size="12" font-weight="600">Resend</text>
+    <text x="1096" y="432" font-size="10" fill="#9AA59E">email</text>
+
+    <!-- arrows -->
+    <line x1="244" y1="200" x2="292" y2="170" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="244" y1="200" x2="292" y2="238" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="514" y1="163" x2="562" y2="190" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="514" y1="239" x2="562" y2="220" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="742" y1="208" x2="790" y2="178" stroke="#56C7B2" stroke-width="1.5"/>
+    <line x1="742" y1="208" x2="790" y2="286" stroke="#D8A25C" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="918" y1="224" x2="918" y2="240" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="918" y1="332" x2="918" y2="380" stroke="#3A4A43" stroke-width="1.5"/>
+    <line x1="1046" y1="428" x2="1080" y2="428" stroke="#3A4A43" stroke-width="1.5"/>
+    <polygon points="1080,428 1071,423 1071,433" fill="#3A4A43"/>
+
+    <!-- legend -->
+    <rect x="48" y="300" width="466" height="176" rx="4" fill="#101513" stroke="#2B3531"/>
+    <text x="68" y="328" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.4" fill="#D8A25C">WHY IT IS BUILT THIS WAY</text>
+    <text x="68" y="355" font-size="12" fill="#EDEFEA">Every source is isolated, so one failing feed cannot stop the report.</text>
+    <text x="68" y="379" font-size="12" fill="#EDEFEA">The AI step is optional. A deterministic commentary fills the gap.</text>
+    <text x="68" y="403" font-size="12" fill="#EDEFEA">A dry run writes the report locally before anything is sent.</text>
+    <text x="68" y="427" font-size="12" fill="#EDEFEA">No secret is committed; the workflow reads GitHub Actions secrets.</text>
+    <text x="68" y="459" font-size="11" fill="#9AA59E">Earlier versions used per-ticker quote calls and a second price</text>
+    <text x="68" y="476" font-size="11" fill="#9AA59E">source, which failed on quota and 401s. Both were removed from the data path.</text>
+
+    <!-- disclaimer -->
+    <rect x="48" y="520" width="1104" height="58" rx="4" fill="#17201C" stroke="#D8A25C"/>
+    <text x="68" y="545" font-size="12" font-weight="600" fill="#D8A25C">Automated market analysis — not financial advice.</text>
+    <text x="68" y="565" font-size="11" fill="#9AA59E">The report describes observed session data. It does not predict prices, guarantee returns, or recommend trades.</text>
+
+    <text x="48" y="604" font-size="11" fill="#6F7A73">Verified against projects/nse-bot README, PLAN, package.json and the GitHub Actions workflow</text>
+  </g>
+</svg>

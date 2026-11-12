@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muniko53.github.io/jacob-muniko-portfolio/sitemap.xml

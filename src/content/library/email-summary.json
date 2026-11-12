@@ -1,0 +1,25 @@
+{
+  "slug": "email-summary",
+  "order": 4,
+  "name": "Email Summary Bot",
+  "category": "Automation",
+  "status": "Completed",
+  "summary": "A personal morning digest that reads unread Gmail messages from the last day, summarizes them with OpenRouter models, and sends the result to WhatsApp.",
+  "problem": "A crowded inbox is a bad way to start a morning. The useful information is spread across unread threads, and opening each one to find the two lines that matter is a repeated tax.",
+  "solution": "A Python job uses the Gmail readonly scope to collect unread messages from the last 24 hours, asks OpenRouter for a short summary, and falls back to a plain summary when the model is unavailable. The digest is delivered through CallMeBot to WhatsApp. OAuth tokens and API keys stay local and out of the repository.",
+  "stack": [
+    "Python",
+    "Gmail API",
+    "OpenRouter",
+    "CallMeBot",
+    "OAuth"
+  ],
+  "links": [
+    {
+      "label": "Discuss a similar automation",
+      "url": "contact/",
+      "type": "primary",
+      "internal": true
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="robots" content="{{ROBOTS}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jacob Muniko">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+<meta name="theme-color" content="{{THEME_COLOR}}" id="theme-color-meta">
+<link rel="icon" type="image/x-icon" href="{{ROOT}}assets/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ROOT}}assets/img/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ROOT}}assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ROOT}}assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="{{ROOT}}assets/img/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ROOT}}assets/img/apple-touch-icon.png">
+<link rel="manifest" href="{{ROOT}}site.webmanifest">
+<link rel="preload" href="{{ROOT}}assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ROOT}}assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // Dark is the default. A saved choice wins. Inline so there is no flash.
+  try {
+    var stored = localStorage.getItem("jm-theme");
+    if (stored === "light" || stored === "dark") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jacob Muniko",
+  "jobTitle": "Technology builder",
+  "description": "Builds web applications, local AI tools, Windows software, and automation.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Karatina", "addressCountry": "KE" },
+  "email": "mailto:jacobmuniko53@gmail.com",
+  "url": "https://muniko53.github.io/jacob-muniko-portfolio/",
+  "sameAs": ["https://github.com/muniko53"],
+  "knowsAbout": ["Web development", "AI applications", "Workflow automation", "Desktop software", "PostgreSQL", "React", "Node.js", "PySide6"],
+  "knowsLanguage": ["en", "sw"]
+}
+</script>
+<link rel="stylesheet" href="{{ROOT}}assets/css/site.css">
+</head>
+<body class="{{BODY_CLASS}}">
+<a class="skip" href="#main">Skip to content</a>
+{{NAV}}
+<main id="main">
+{{CONTENT}}
+</main>
+{{FOOTER}}
+<script src="{{ROOT}}assets/js/site.js" defer></script>
+{{SCRIPTS}}
+{{ANALYTICS}}
+</body>
+</html>
