@@ -173,7 +173,7 @@ function navFor(root, active) {
 
   return `<header class="site-head">
   <div class="head-inner">
-    <a class="brand" href="${root}" aria-label="Jacob Muniko — home">
+    <a class="brand" href="${root}" aria-label="Jacob Muniko - home">
       <span class="brand-mark" aria-hidden="true"><img src="${root}assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
       <span class="brand-name">Jacob Muniko</span>
     </a>
@@ -213,7 +213,7 @@ function footerFor(root) {
   return `<footer class="site-foot">
   <div class="foot-inner">
     <div class="foot-brand">
-      <a class="brand" href="${root}" aria-label="Jacob Muniko — home">
+      <a class="brand" href="${root}" aria-label="Jacob Muniko - home">
         <span class="brand-mark" aria-hidden="true"><img src="${root}assets/img/brand-mark.png" alt="" width="30" height="30" loading="eager" decoding="async"></span>
         <span class="brand-name">Jacob Muniko</span>
       </a>
@@ -399,7 +399,7 @@ const written = [];
   for (const [key, value] of Object.entries(vars)) content = content.replaceAll(`{{${key}}}`, value);
   const out = page({
     relFile: "index.html",
-    title: "Jacob Muniko — Technology builder in Karatina, Kenya",
+    title: "Jacob Muniko - Technology builder in Karatina, Kenya",
     description:
       "Jacob Muniko builds practical software: web applications, local AI tools, Windows utilities, and automation. Based in Karatina, Kenya. Open for freelance and contract work.",
     canonicalPath: "",
@@ -466,7 +466,7 @@ for (const item of work) {
   for (const [key, value] of Object.entries(vars)) content = content.replaceAll(`{{${key}}}`, value);
   const out = page({
     relFile,
-    title: item.seoTitle || `${item.title} — Jacob Muniko`,
+    title: item.seoTitle || `${item.title} - Jacob Muniko`,
     description: item.seoDescription || item.summary,
     canonicalPath: `work/${item.slug}`,
     content,
@@ -502,7 +502,7 @@ for (const item of work) {
   for (const [key, value] of Object.entries(vars)) content = content.replaceAll(`{{${key}}}`, value);
   const out = page({
     relFile,
-    title: "Projects — Jacob Muniko",
+    title: "Projects - Jacob Muniko",
     description:
       "Case studies and a project register by Jacob Muniko: web applications, AI tools, desktop software, automation, and data pipelines.",
     canonicalPath: "projects",
@@ -541,7 +541,7 @@ for (const item of library) {
   for (const [key, value] of Object.entries(vars)) content = content.replaceAll(`{{${key}}}`, value);
   const out = page({
     relFile,
-    title: `${item.name} — Jacob Muniko`,
+    title: `${item.name} - Jacob Muniko`,
     description: item.summary,
     canonicalPath: `projects/${item.slug}`,
     content,
@@ -558,7 +558,7 @@ for (const item of library) {
   const content = template.replaceAll("{{ROOT}}", root);
   const out = page({
     relFile,
-    title: "Services — Jacob Muniko",
+    title: "Services - Jacob Muniko",
     description:
       "Web development, AI development, workflow automation, and custom software. Independent technology builder in Karatina, Kenya.",
     canonicalPath: "services",
@@ -576,7 +576,7 @@ for (const item of library) {
   const content = template.replaceAll("{{ROOT}}", root);
   const out = page({
     relFile,
-    title: "About — Jacob Muniko",
+    title: "About - Jacob Muniko",
     description:
       "Jacob Muniko is a technology builder in Karatina, Kenya, completing a Bachelor of Education (Arts) at Karatina University while building web, AI, desktop, and automation software.",
     canonicalPath: "about",
@@ -596,7 +596,7 @@ for (const item of library) {
     .replaceAll("{{FORM}}", formBlock(root));
   const out = page({
     relFile,
-    title: "Contact — Jacob Muniko",
+    title: "Contact - Jacob Muniko",
     description:
       "Start a project with Jacob Muniko: web development, AI tools, automation, and custom software. Email, WhatsApp, or use the project inquiry form.",
     canonicalPath: "contact",
@@ -615,7 +615,7 @@ for (const item of library) {
   const content = template.replaceAll("{{ROOT}}", root);
   const out = page({
     relFile,
-    title: "Privacy — Jacob Muniko",
+    title: "Privacy - Jacob Muniko",
     description:
       "What the portfolio stores in your browser, how inquiry messages are handled, and why there are no advertising trackers.",
     canonicalPath: "privacy",
@@ -629,7 +629,7 @@ for (const item of library) {
   const template = await read(path.join(SRC, "content/pages/404.html"));
   const out = page({
     relFile: "404.html",
-    title: "Page not found — Jacob Muniko",
+    title: "Page not found - Jacob Muniko",
     description: "That page does not exist. Browse projects or get in touch.",
     canonicalPath: "404.html",
     content: template.replaceAll("{{ROOT}}", "./"),

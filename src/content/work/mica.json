@@ -33,7 +33,7 @@
   "heroWidth": 1905,
   "heroHeight": 919,
   "heroCaption": "The browser console. The yellow banner is the local API boundary: the page cannot reach the server without a launcher token. This is the safety model made visible.",
-  "seoTitle": "MICA case file — Jacob Muniko",
+  "seoTitle": "MICA case file - Jacob Muniko",
   "seoDescription": "How MICA, a local-first Windows AI assistant, handles files, apps, browser actions, memory and automation behind an approval gate. Architecture and current status.",
   "ogImage": "og-mica.png"
 }

@@ -37,7 +37,7 @@
   "heroWidth": 1919,
   "heroHeight": 911,
   "heroCaption": "The live home page, captured 10 November 2026. Shows 7+ active listings, 5+ students, 1+ universities.",
-  "seoTitle": "Linklet case file — Jacob Muniko",
+  "seoTitle": "Linklet case file - Jacob Muniko",
   "seoDescription": "How Linklet, a campus marketplace for Kenyan university students, was built with React, Express, PostgreSQL, Socket.IO, Cloud Run, and Vercel.",
   "ogImage": "og-linklet.png"
 }
