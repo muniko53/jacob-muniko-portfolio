@@ -11,6 +11,7 @@
  */
 
 import { promises as fs } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -35,6 +36,27 @@ const esc = (value = "") =>
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+
+/* ------------------------------------------------------------------ */
+/* Asset version stamp                                                 */
+/* ------------------------------------------------------------------ */
+
+/* GitHub Pages serves CSS and JS with a max-age of 600 seconds, so a
+   browser can hold fresh HTML next to a stale stylesheet and render a
+   page that never existed. The stamp changes only when the CSS or JS
+   content changes, which keeps those two in step. */
+async function assetVersion() {
+  const hash = createHash("sha256");
+  const files = [path.join(SRC, "assets/css/site.css")];
+  const jsDir = path.join(SRC, "assets/js");
+  for (const file of (await fs.readdir(jsDir)).filter((f) => f.endsWith(".js")).sort()) {
+    files.push(path.join(jsDir, file));
+  }
+  for (const file of files) hash.update(await fs.readFile(file));
+  return hash.digest("hex").slice(0, 8);
+}
+
+const ASSET_VERSION = await assetVersion();
 
 const site = await readJSON(path.join(SRC, "content/site.json"));
 
@@ -258,7 +280,10 @@ function page({
     CONTENT: content,
     BODY_CLASS: bodyClass,
     ANALYTICS: analyticsTag(),
-    SCRIPTS: scripts.map((s) => `<script src="${root}assets/js/${s}" defer></script>`).join("\n"),
+    ASSET_VERSION,
+    SCRIPTS: scripts
+      .map((s) => `<script src="${root}assets/js/${s}?v=${ASSET_VERSION}" defer></script>`)
+      .join("\n"),
     YEAR: String(new Date().getFullYear()),
   };
   let html = layout;

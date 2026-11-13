@@ -23,6 +23,11 @@ This reads `src/`, validates the content, and writes `index.html`, `work/`,
 `sitemap.xml`, `robots.txt`, `site.webmanifest`, and `assets/` to the repository
 root.
 
+GitHub Pages caches HTML and CSS for ten minutes, so the build stamps the CSS
+and JS URLs with a hash of their contents (`site.css?v=3d65725b`). The stamp
+changes only when those files change, which stops a browser from pairing fresh
+HTML with a stale stylesheet.
+
 ## Check
 
 ```bash
