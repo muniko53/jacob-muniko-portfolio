@@ -31,7 +31,7 @@
   "heroWidth": 1320,
   "heroHeight": 820,
   "heroCaption": "Storage Analysis. A headless render from the current build with synthetic sample data.",
-  "seoTitle": "FilePilot case file — Jacob Muniko",
+  "seoTitle": "FilePilot case file - Jacob Muniko",
   "seoDescription": "How FilePilot, a local Windows file intelligence tool, combines storage analysis, exact duplicate detection, and approval-gated deletion in PySide6 and SQLite.",
   "ogImage": "og-filepilot.png"
 }

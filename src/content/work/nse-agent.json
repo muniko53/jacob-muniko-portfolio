@@ -31,7 +31,7 @@
   "heroWidth": 1200,
   "heroHeight": 1600,
   "heroCaption": "A generated report from 8 November 2026. A dated snapshot, not current market data.",
-  "seoTitle": "NSE Intelligence Agent case file — Jacob Muniko",
+  "seoTitle": "NSE Intelligence Agent case file - Jacob Muniko",
   "seoDescription": "How a fragile NSE report bot was rebuilt as a scheduled Node.js pipeline with one full-board fetch, isolated sources, deterministic analysis, and Resend delivery.",
   "ogImage": "og-nse.png"
 }
